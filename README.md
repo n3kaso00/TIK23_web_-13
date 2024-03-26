@@ -10,9 +10,9 @@ what we have learned during the first semester.
 
 Site is made by:
 
-*Petteri Säävälä   //psaavala
-*Merna Rofail      //mer012
-*Olivia Luomajoki  //oliluoma
-*Marianna Juustila //mjuustila
-*Veronika Sippala  //n3sian00
-*Sonja Karppanen   //n3kaso00
+* Petteri Säävälä   //psaavala
+* Merna Rofail      //mer012
+* Olivia Luomajoki  //oliluoma
+* Marianna Juustila //mjuustila
+* Veronika Sippala  //n3sian00
+* Sonja Karppanen   //n3kaso00
