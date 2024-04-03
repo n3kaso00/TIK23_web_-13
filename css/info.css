@@ -1,0 +1,40 @@
+body {
+    background-image: url('taustakuvainfo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: #714328;
+    margin-top: 0px;
+}
+a {
+    text-decoration: none;
+    color: #dde5b6;
+    text-align: center;
+}
+
+article {
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+#header {
+    margin: 0px;
+    text-align: center; 
+}
+
+p {
+    color: white;
+    text-shadow: 2px;
+}
+
+main {
+    background-color: rgba(0, 0, 0, 0,5);
+    padding: 20px;
+    border-radius: 10px;
+}

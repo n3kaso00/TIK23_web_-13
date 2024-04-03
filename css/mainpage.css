@@ -1,5 +1,26 @@
+
+ h1 {
+    margin: 0px;
+ }
+
+.navbar {
+    background-color: #714328;
+    margin-top: 0px;
+}
+
+.navbar a {
+    color: #dde5b6;
+}
+
 #header {
     text-align: center;
+    background-color: #714328;
+    margin-bottom: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #dde5b6;
 }
 
 #footer {
@@ -7,17 +28,23 @@
     max-width: 100%;
 }
 
+#footer a {
+    text-decoration: underline;
+}
+
 #maincontent {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    background-color: #dde5b6;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
-
 #maincontent img {   
-    margin: 5px;   
+    margin: 5px;
+    border-radius: 5px;   
 }
 
 figure {
@@ -29,6 +56,32 @@ figcaption {
     width: 100%;
     margin-top: 5px;
 }
+
+@keyframes hovershadow {
+    to {
+        box-shadow: 0 0 20px rgb(54, 110, 66);
+    }
+}
+
+img:hover {
+    animation-name: hovershadow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shadow {
+    to {
+        box-shadow: 0 0 20px rgb(221, 229, 182)
+    }
+}
+
+li:hover {
+    animation-name: shadow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* responsiivisuus ei ole vielä lähelläkään valmis :DD */
 
 @media only screen and (max-width: 600px) {
     img {
