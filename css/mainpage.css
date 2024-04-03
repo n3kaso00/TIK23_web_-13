@@ -4,19 +4,19 @@
  }
 
 .navbar {
-    background-color: #f0ead2;
+    background-color: #714328;
     margin-top: 0px;
 }
 
 #header {
     text-align: center;
-    background-color: #f0ead2;
+    background-color: #714328;
     margin-bottom: 0px;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: #dde5b6;
 }
 
 #footer {
