@@ -30,6 +30,16 @@ figcaption {
     margin-top: 5px;
 }
 
+@keyframes hovershadow {
+    to {
+        box-shadow: 4px 5px 10px;
+    }
+}
+img:hover{
+    animation-name: hovershadow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
 
 /* responsiivisuus ei ole vielä lähelläkään valmis :DD */
 
