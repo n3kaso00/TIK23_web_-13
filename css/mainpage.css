@@ -2,7 +2,9 @@
     background-color: #dde5b6;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+ h1 {
+    margin: 0px;
+ }
 .navbar {
     background-color: #f0ead2;
     margin-top: 0px;
