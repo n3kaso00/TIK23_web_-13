@@ -4,8 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/points.css">
 </head>
 <body>
-    
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainmenu"
+                aria-controls="mainmenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse justify-content-center" id="mainmenu">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/rome.html">Muinainen Rooma</a></li>
+                <li class="nav-item"><a class="nav-link" href="/egypt.html">Muinainen Egypti</a></li>
+                <li class="nav-item"><a class="nav-link" href="/vikings.html">Viikingit</a></li>
+                <li class="nav-item"><a class="nav-link" href="/middleage.html">Keskiaika</a></li>
+                <li class="nav-item"><a class="nav-link" href="/renaissance.html">Renessanssin aika</a></li>
+                <li class="nav-item"><a class="nav-link" href="/industrial.html">Teollinen aikakausi</a></li>
+                <li class="nav-item"><a class="nav-link" href="/points.html">Kokonaispisteet</a></li>
+            </ul>
+        </div>
+        </div>
+        </nav>
+
+        <div id="bestpoints">
+            <h1>Parhaat pisteesi</h1>
+            <div id="gamepoints" class="flex-container">
+                <div id="roomepoints">
+                    <p>Muinainen Rooma</p>
+                </div>
+                <div id="egyptpoints">
+                    <p>Muinainen Egypti</p>
+                </div>
+                <div id="vikingpoints">
+                    <p>Viikingit</p>
+                </div>
+                <div id="middleagepoints">
+                    <p>Keskiaika</p>
+                </div>
+                <div id="renaissancepoints">
+                    <p>Renesanssin aika</p>
+                </div>
+                <div id="industrialpoints">
+                    <p>Teollinen aikakausi</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="score">
+            <h1>Yhteispisteet</h1>
+        </div>
+
+        <div id="badges">
+            <h1>Suoritusmerkkisi</h1>
+            <div>
+                <div id="romebadge"></div>
+                <div id="egyptbadge"></div>
+                <div id="vikingbadge"></div>
+                <div id="middleagebadge"></div>
+                <div id="renaissancebadge"></div>
+                <div id="industrialbadge"></div>
+            </div>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="/js/points.js"></script>
 </body>
 </html>
