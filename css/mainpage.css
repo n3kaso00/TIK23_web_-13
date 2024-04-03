@@ -1,7 +1,3 @@
-#maincontent {
-    background-color: #dde5b6;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 
  h1 {
     margin: 0px;
@@ -37,6 +33,8 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    background-color: #dde5b6;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
@@ -57,7 +55,7 @@ figcaption {
 
 @keyframes hovershadow {
     to {
-        box-shadow: 0 0 10px rgba(1, 1, 1, 0.5);
+        box-shadow: 0 0 20px rgb(54, 110, 66);
     }
 }
 
