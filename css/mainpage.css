@@ -14,9 +14,18 @@
     margin-bottom: 0px;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 #footer {
     text-align: center;
     max-width: 100%;
+}
+
+#footer a {
+    text-decoration: underline;
 }
 
 #maincontent {
