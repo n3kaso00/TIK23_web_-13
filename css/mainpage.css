@@ -1,10 +1,35 @@
+#maincontent {
+    background-color: #dde5b6;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ h1 {
+    margin: 0px;
+ }
+
+.navbar {
+    background-color: #f0ead2;
+    margin-top: 0px;
+}
+
 #header {
     text-align: center;
+    background-color: #f0ead2;
+    margin-bottom: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 #footer {
     text-align: center;
     max-width: 100%;
+}
+
+#footer a {
+    text-decoration: underline;
 }
 
 #maincontent {
@@ -15,9 +40,9 @@
 }
 
 
-
 #maincontent img {   
-    margin: 5px;   
+    margin: 5px;
+    border-radius: 5px;   
 }
 
 figure {
@@ -30,6 +55,17 @@ figcaption {
     margin-top: 5px;
 }
 
+@keyframes hovershadow {
+    to {
+        box-shadow: 0 0 10px rgba(1, 1, 1, 0.5);
+    }
+}
+
+img:hover{
+    animation-name: hovershadow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
 
 /* responsiivisuus ei ole vielä lähelläkään valmis :DD */
 
@@ -37,8 +73,4 @@ figcaption {
     img {
         max-width: 350px;
     }
-}
-
-#maincontent {
-    background-color: #dde5b6;
 }
