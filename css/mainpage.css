@@ -65,6 +65,12 @@ img:hover{
     animation-fill-mode: forwards;
 }
 
+li:hover {
+    animation-name: hovershadow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
 /* responsiivisuus ei ole vielä lähelläkään valmis :DD */
 
 @media only screen and (max-width: 600px) {
