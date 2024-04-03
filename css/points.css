@@ -30,25 +30,20 @@ figcaption {
     margin-top: 5px;
 }
 
-@keyframes hovershadow {
-    to {
-        box-shadow: 4px 5px 10px;
-    }
-}
-img:hover{
-    animation-name: hovershadow;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-/* responsiivisuus ei ole vielä lähelläkään valmis :DD */
-
 @media only screen and (max-width: 600px) {
     img {
         max-width: 350px;
     }
 }
 
-#maincontent {
-    background-color: #dde5b6;
+h1 {
+    text-align: center;
+    padding: 40px;
+}
+
+.flex-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   
 }
