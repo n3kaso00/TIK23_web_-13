@@ -25,6 +25,13 @@ a {
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
+#welcometext {
+    background-color: #f0ead2;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
 #footer {
     text-align: center;
     max-width: 100%;
@@ -61,7 +68,7 @@ figcaption {
 
 @keyframes hovershadow {
     to {
-        box-shadow: 0 0 20px rgb(54, 110, 66);
+        box-shadow: 0 0 20px rgb(87, 41, 21);
     }
 }
 
