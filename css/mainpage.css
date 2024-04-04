@@ -13,6 +13,10 @@
     color: #f0ead2;
 }
 
+.navbar a:hover {
+    color: #f0ead2;
+}
+
 #header {
     text-align: center;
     background-color: #3a2618;
@@ -99,7 +103,7 @@ figcaption {
 
 img:hover {
     animation-name: hovershadow;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
 
