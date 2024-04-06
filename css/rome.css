@@ -1,0 +1,42 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#header {
+    text-align: center;
+    background-color: #3a2618;
+    margin-bottom: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #f0ead2;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar {
+    background-color: #3a2618;
+    margin-top: 0px;
+}
+
+.navbar a {
+    color: #f0ead2;
+}
+
+@keyframes shadow {
+    to {
+        box-shadow: 0 0 20px rgb(221, 229, 182)
+    }
+}
+
+li:hover {
+    animation-name: shadow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.navbar a:hover {
+    color: #f0ead2;
+}
+
