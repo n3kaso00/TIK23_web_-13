@@ -1,7 +1,23 @@
 
+        /* header */
+
  h1 {
     margin: 0px;
  }
+
+ #header {
+    text-align: center;
+    background-color: #3a2618;
+    margin-bottom: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #f0ead2;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+        /* navbar */
 
 .navbar {
     background-color: #3a2618;
@@ -17,24 +33,20 @@
     color: #f0ead2;
 }
 
-#header {
-    text-align: center;
-    background-color: #3a2618;
-    margin-bottom: 0px;
+@keyframes shadow {
+    to {
+        box-shadow: 0 0 20px rgb(221, 229, 182)
+    }
 }
 
-a {
-    text-decoration: none;
-    color: #f0ead2;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+li:hover {
+    animation-name: shadow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
-#welcometext {
-    background-color: #f0ead2;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-}
+
+        /* footer */
 
 section{
     padding: 20px;
@@ -70,6 +82,8 @@ section{
     color: #f0ead2;
 }
 
+        /* maincontent */
+
 #maincontent {
     display: flex;
     flex-wrap: wrap;
@@ -79,6 +93,8 @@ section{
     font-weight:900;
     font-family: Georgia, 'Times New Roman', Times, serif
 }
+
+        /* kuvat */
 
 
 #maincontent img {   
@@ -108,17 +124,8 @@ img:hover {
     animation-fill-mode: forwards;
 }
 
-@keyframes shadow {
-    to {
-        box-shadow: 0 0 20px rgb(221, 229, 182)
-    }
-}
 
-li:hover {
-    animation-name: shadow;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
+        /* responsiivisuus */
 
 /* responsiivisuus ei ole vielä lähelläkään valmis :DD */
 

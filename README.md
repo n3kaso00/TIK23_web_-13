@@ -10,9 +10,9 @@ what we have learned during the first semester.
 
 Site is made by:
 
-* Petteri Säävälä   //psaavala
-* Merna Rofail      //mer012
-* Olivia Luomajoki  //oliluoma
-* Marianna Juustila //mjuustila
-* Veronika Sippala  //n3sian00
-* Sonja Karppanen   //n3kaso00
+* Petteri Säävälä   //psaavala  (Vikings)
+* Merna Rofail      //mer012    (Renaissance)
+* Olivia Luomajoki  //oliluoma  (Ancient rome)
+* Marianna Juustila //mjuustila (Ancient egypt)
+* Veronika Sippala  //n3sian00  (Middle age)
+* Sonja Karppanen   //n3kaso00  (Industrial revolution)

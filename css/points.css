@@ -4,32 +4,37 @@ body {
 }
 
 #mainpage {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #f0ead2;
-    color: #3a2618;
+    margin: 30px;
+    text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.navbar {
-    background-color: #3a2618;
-    margin-top: 0px;
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-.navbar a {
-    color: #f0ead2;
+#gamepoints {
+    padding: 30px;
 }
 
-#footer {
-    text-align: center;
-    max-width: 100%;
+#score {
+    padding: 30px;
 }
 
-#footer a {
-    text-decoration: underline;
+#badges {
+    padding: 20px;
 }
 
-#header {
+
+ /* header */
+
+ h1 {
+    margin: 0px;
+ }
+
+ #header {
     text-align: center;
     background-color: #3a2618;
     margin-bottom: 0px;
@@ -38,31 +43,28 @@ body {
 a {
     text-decoration: none;
     color: #f0ead2;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-h1 {
-    margin: 0px;
+/*header päättyy*/
+
+/* navbar */
+
+.navbar {
+    background-color: #3a2618;
+    margin-top: 0px;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-h2 {
-    text-align: center;
-    padding: 40px;
+.navbar a {
+    color: #f0ead2;
 }
 
-.flex-container {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-   
+.navbar a:hover {
+    color: #f0ead2;
 }
 
-div {
-    text-align: center;
-  }
-
-
-  @keyframes shadow {
+@keyframes shadow {
     to {
         box-shadow: 0 0 20px rgb(221, 229, 182)
     }
@@ -73,37 +75,41 @@ li:hover {
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
+/*navbar päättyy*/        
 
-.navbar a:hover {
-    color: #f0ead2;
+/* footer */
+
+section{
+padding: 20px;
 }
 
 .footer{
-    background-color: #3a2618;
-    text-align: center;
-    padding: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-    gap: 3.5rem;
-    left: 0;
-    right: 0;
-    bottom: 0;
+background-color: #3a2618;
+text-align: center;
+padding: 10px;
+grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+gap: 3.5rem;
+left: 0;
+right: 0;
+bottom: 0;
 }
 
 .footer-content h4{
-    color: #f0ead2;
-    font-size: 20px;
-    margin-bottom: 1rem;
+color: #f0ead2;
+font-size: 20px;
+margin-bottom: 1rem;
 }
 
 .footer-content li{
-    margin-bottom: 15px;
-    display: block;
+margin-bottom: 15px;
+display: block;
 }
 
 .footer-content li a{
-    color: #f0ead2;
+color: #f0ead2;
 }
 
 .footer-content p{
-    color: #f0ead2;
+color: #f0ead2;
 }
+/*footer päättyy*/
