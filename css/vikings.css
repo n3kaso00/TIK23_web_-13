@@ -18,6 +18,42 @@ a {
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
+#maincontent {
+
+    background-color: #f0ead2;
+    margin: 5px;
+    border: 1px solid black;
+    display: flex;
+
+}
+
+#textbox {
+
+    background-color: #f0ead2;
+    margin: 5px;
+    border: 1px solid black;
+    max-height: 200px;
+}
+
+#picturebox {
+    background-color: #f0ead2;
+    margin: 5px;
+    border: 1px solid black;
+    max-width: 640px;
+    max-height: 640px;
+
+    
+}
+
+#mediabox {
+    background-color: #f0ead2;
+    margin: 5px;
+    border: 1px solid black;
+    max-width: 640px;
+    max-height: 640px;
+    align-self: ;
+}
+
 .footer{
     background-color: #3a2618;
     text-align: center;
