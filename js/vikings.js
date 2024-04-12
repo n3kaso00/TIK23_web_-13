@@ -87,7 +87,7 @@ let correctAnswers = 0;
     const choices = document.querySelectorAll(".choice");
     const choiceLabels = document.querySelectorAll(".choice-label");
 
-    choices.forEach((choice, index) => {
+    choices.forEach((choices, index) => {
       choiceLabels[index].textContent = questions[currentQuestion].choices[index];
     });
 
