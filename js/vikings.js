@@ -60,29 +60,41 @@ lähi-idän maiden kanssa.
 */
 document.getElementById('answerform').addEventListener('submit', answer);
 
-let questions = ['Viikingit muistetaaan keskuudessamme pohjoismaisina hurjina sotureina, ja useimmat aiheesta kertovat pelit, elokuvat ja tarinat keskittyvätkin suurimmaksi osaksi tähän heidän hurjaan puoleensa. Viikingit olivat kuitenkin ennen kaikkea menestyneitä kauppiaita ja liikkeenharjoittajia. He saivat elantonsa pitämällä maatiloja, kalastamalla, metsästämällä, kauppaamalla tekemiänsä tuotteita sekä valloittamalla uusia alueita.']
 
-let choicesA = ['A: 650-859']
-let choicesB = ['B: 793-1066']
-let choicesC = ['C: 823-1145']
+const questions = [
+
+    {
+        
+      trivia: "Viikingit muistetaan keskuudessamme pohjoismaisina hurjina sotureina, ja useimmat aiheesta kertovat pelit, elokuvat ja tarinat keskittyvätkin suurimmaksi osaksi tähän heidän hurjaan puoleensa. Viikingit olivat kuitenkin ennen kaikkea menestyneitä kauppiaita ja liikkeenharjoittajia. He saivat elantonsa pitämällä maatiloja, kalastamalla, metsästämällä, kauppaamalla tekemiänsä tuotteita sekä valloittamalla uusia alueita. "  ,
+      question: "Mille aikavälille Viikinkien aikakausi sijoittui?",
+      choices: ["650-859", "793-1066", "823-1145"],
+      answer: 1
+    } 
+  ];
+  
+let currentQuestion = 0;
+let correctAnswers = 0;
 
 
+  function showQuestion() {
 
-let answers = ['b', '', '', ''];
-let index = 0;
-let points = 0;
+    const triviaText = document.getElementById("triviabox");
+    triviaText.textContent = questions[currentQuestion].trivia;
 
-let questionElement = document.getElementById('triviabox');
-questionElement.textContent = questions[index];
+    const questionText = document.getElementById("questionbox");
+    questionText.textContent = questions[currentQuestion].question;
+  
+    const choices = document.querySelectorAll(".choice");
+    const choiceLabels = document.querySelectorAll(".choice-label");
 
-let choiceElementA = document.getElementById('choice_a_label');
-choiceElementA.textContent = choicesA[index];
+    choices.forEach((choice, index) => {
+      choiceLabels[index].textContent = questions[currentQuestion].choices[index];
+    });
 
-let choiceElementB = document.getElementById('choice_b_label');
-choiceElementB.textContent = choicesB[index];
+}
 
-let choiceElementC = document.getElementById('choice_c_label');
-choiceElementC.textContent = choicesC[index];
+showQuestion();
+
 
 
 
