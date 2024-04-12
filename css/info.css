@@ -1,40 +1,138 @@
 body {
-    background-image: url('taustakuvainfo.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: white;
-    padding: 20px;
+    position: relative;
 }
 
-.navbar {
-    background-color: #714328;
-    margin-top: 0px;
+.backround-image {
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 90px);
+    background-image: url('./images/hieroglyph2.jpg');
+    overflow: hidden;
+    
 }
+
+.backround-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    margin: 0px;
+ }
+
+ #header {
+    text-align: center;
+    background-color: #3a2618;
+    margin-bottom: 0px;
+}
+
 a {
     text-decoration: none;
-    color: #dde5b6;
-    text-align: center;
+    color: #f0ead2;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-article {
-    text-align: center;
+        /* navbar */
+
+.navbar {
+    background-color: #3a2618;
+    margin-top: 0px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    color: #f0ead2;
+}
+
+.navbar a:hover {
+    color: #f0ead2;
+}
+
+
+@keyframes shadow {
+    to {
+        box-shadow: 0 0 20px rgb(221, 229, 182)
+    }
+}
+
+li:hover {
+    animation-name: shadow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+        /* footer */
+
+section{
     padding: 20px;
-    color: white;
 }
 
-#header {
-    margin: 0px;
-    text-align: center; 
+.footer{
+    position: absolute;
+    background-color: #3a2618;
+    text-align: center;
+    padding: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 3.5rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
-p {
-    color: white;
-    text-shadow: 2px;
+.footer-content h4{
+    color: #f0ead2;
+    font-size: 20px;
+    margin-bottom: 1rem;
 }
 
-main {
-    background-color: rgba(0, 0, 0, 0,5);
-    padding: 20px;
-    border-radius: 10px;
+.footer-content li{
+    margin-bottom: 15px;
+    display: block;
+}
+
+.footer-content li a{
+    color: #f0ead2;
+}
+
+.footer-content p{
+    color: #f0ead2;
+}
+
+.footer-image {
+    max-width: 500px; 
+    height: auto; 
+}
+
+
+figcaption {
+    width: 100%;
+    margin-top: 5px;
+}
+
+@keyframes hovershadow {
+    to {
+        box-shadow: 0 0 20px rgb(87, 41, 21);
+    }
+}
+
+img:hover {
+    animation-name: hovershadow;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+
+        /* responsiivisuus */
+
+/* responsiivisuus ei ole vielä lähelläkään valmis :DD */
+
+@media only screen and (max-width: 600px) {
+    img {
+        max-width: 350px;
+    }
 }
