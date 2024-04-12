@@ -79,3 +79,16 @@ a {
 .footer-content p{
     color: #f0ead2;
 }
+
+#maincontent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0ead2;
+    font-weight:900;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+  
+ 
