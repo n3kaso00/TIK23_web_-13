@@ -51,24 +51,29 @@
     
         </div>
     
-    <div id="triviabox">
-    </div>
+        <div id="triviabox">
+        </div>
 
 
 
-    <div id="answerbox">
+        <div id="answerbox">
 
-        <p>Valitse yksi kolmesta allaolevasta vaihtoehdosta:</p>
+        <div id="questionbox">
+        </div>
+
+        <p>Valitse klikkaamalla yksi kolmesta allaolevasta vaihtoehdosta:</p>
+
+        
 
         <form id="answerform">
-            <input type="radio" id="choice_a" name="quiz_answer" value="a" />
-            <label for="choice_a" id="choice_a_label"></label>
+            <input type="radio" class="choice"  value="0" />
+            <label class="choice-label"></label>
 
-            <input type="radio" id="choice_b" name="quiz_answer" value="b" />
-            <label for="choice_b" id="choice_b_label"></label>
+            <input type="radio" class="choice"  value="1" />
+            <label class="choice-label"></label>
 
-            <input type="radio" id="choice_c" name="quiz_answer" value="c" />
-            <label for="choice_c" id="choice_c_label"></label>
+            <input type="radio" class="choice"  value="2" />
+            <label class="choice-label"></label>
 
             
 
@@ -79,6 +84,9 @@
 
     
 
+
+    
+    </div>
     <section class="footer">
         <div class="footer-content">
             <img src="x">
