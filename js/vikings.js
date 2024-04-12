@@ -5,7 +5,7 @@ ja liikkeenharjoittajia. He saivat elantonsa pitämällä maatiloja,
 kalastamalla, metsästämällä, kauppaamalla tekemiänsä 
 tuotteita sekä valloittamalla uusia alueita. 
 
-"kysymys"
+"Mille aikavälille Viikinkien aikakausi sijoittui?"  "650-859 ,, 793-1066 ,, 823-1145"
 
 Viikingit olivat pohjimmiltaan kuitenkin maalaisyhteisöjä, joissa perhe ja oman maapalstan
 omistaminen näyttelivät tärkeintä roolia. Maan omistaminen oli kaikkein tärkeintä, koska 
@@ -58,3 +58,31 @@ lähi-idän maiden kanssa.
 
 
 */
+document.getElementById('answerform').addEventListener('submit', answer);
+
+let questions = ['Viikingit muistetaan keskuudessamme pohjoismaisina hurjina sotureina, ja useimmat aiheesta kertovat pelit, elokuvat ja tarinat keskittyvätkin suurimmaksi osaksi tähän heidän hurjaan puoleensa. Viikingit olivat kuitenkin ennen kaikkea menestyneitä kauppiaita ja liikkeenharjoittajia. He saivat elantonsa pitämällä maatiloja, kalastamalla, metsästämällä, kauppaamalla tekemiänsä tuotteita sekä valloittamalla uusia alueita.']
+
+let choicesA = ['A: 650-859']
+let choicesB = ['B: 793-1066']
+let choicesC = ['C: 823-1145']
+
+
+
+let answers = ['b', '', '', ''];
+let index = 0;
+let points = 0;
+
+let questionElement = document.getElementById('triviabox');
+questionElement.textContent = questions[index];
+
+let choiceElementA = document.getElementById('choice_a_label');
+choiceElementA.textContent = choicesA[index];
+
+let choiceElementB = document.getElementById('choice_b_label');
+choiceElementB.textContent = choicesB[index];
+
+let choiceElementC = document.getElementById('choice_c_label');
+choiceElementC.textContent = choicesC[index];
+
+
+
