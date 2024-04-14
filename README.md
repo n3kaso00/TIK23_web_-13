@@ -16,3 +16,5 @@ Site is made by:
 * Marianna Juustila //mjuustila (Ancient egypt)
 * Veronika Sippala  //n3sian00  (Middle age)
 * Sonja Karppanen   //n3kaso00  (Industrial revolution)
+
+Hacknplan link: https://app.hacknplan.com/p/202055/kanban?categoryId=0&boardId=556173
