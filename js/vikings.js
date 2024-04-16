@@ -67,7 +67,8 @@ const questions = [
         
       trivia: "Viikingit muistetaan keskuudessamme pohjoismaisina hurjina sotureina, ja useimmat aiheesta kertovat pelit, elokuvat ja tarinat keskittyvätkin suurimmaksi osaksi tähän heidän hurjaan puoleensa. Viikingit olivat kuitenkin ennen kaikkea menestyneitä kauppiaita ja liikkeenharjoittajia. He saivat elantonsa pitämällä maatiloja, kalastamalla, metsästämällä, kauppaamalla tekemiänsä tuotteita sekä valloittamalla uusia alueita. "  ,
       question: "Mille aikavälille Viikinkien aikakausi sijoittui?",
-      choices: ["650-859", "793-1066", "823-1145"],
+      choices: ["650-859", "793-1066", "823-1145"], 
+      image: "./images/vikings0.jpg",
       answer: 1
     } ,
 
@@ -77,6 +78,7 @@ const questions = [
         trivia: "Viikingit olivat pohjimmiltaan kuitenkin maalaisyhteisöjä, joissa perhe ja oman maapalstan omistaminen näyttelivät tärkeintä roolia. Maan omistaminen oli kaikkein tärkeintä, koska se määritteli ihmisen aseman yhteisössä. Iso perhe ja maatila olikin kaikista tavallisin näky viikinkiyhteisöissä. Naiset olivat kodin ylipäälliköitä, ja miehet hoitivat kaupankäynnin, pellonhoidon ja yhteiskunnalliset toiminnot."  ,
         question: "Mikä oli tunnetuin Viikinkikaupunki?",
         choices: ["Hedeby", "Oslo", "Uppsala"],
+        image: "./images/vikings0.jpg",
         answer: 0
       }  ,
 
@@ -84,6 +86,7 @@ const questions = [
         trivia: "Viikinkien pitämiin eläimiin kuuluivat esimerkiksi vuohet, lampaat, siat, lampaat ja ankat. Niitä vaalittiin suuresti, sillä ne tuottivat Viikingeille ruokaa ja erilaisia, hyötytarvikkeita. Heillä oli myös lemmikkieläimiä (koiria ja kissoja) kuten meilläkin. Viikinkien jumaltarustoon kuitenkin kuului eräs tärkeä susieläin.", 
         question: "Mikä on tämän kuuluisan suden nimi?",
         choices: ["Gullinbursti","Jörmundgandr","Fenrir"],
+        image: "./images/vikings0.jpg",
         answer: 2
       } 
 
@@ -92,6 +95,7 @@ const questions = [
 let currentQuestion = 0;
 let points = 0;
 
+  
 
   function showQuestion() {
 
@@ -100,6 +104,9 @@ let points = 0;
 
     const questionText = document.getElementById("feedbackbox");
     questionText.textContent = questions[currentQuestion].question;
+
+    const showImage = document.getElementById("imagebox");
+    showImage.src = "./images/vikings" + currentQuestion + ".jpg";
   
     const choices = document.querySelectorAll(".choice");
     const choiceLabels = document.querySelectorAll(".choice-label");
