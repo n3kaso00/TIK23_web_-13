@@ -64,6 +64,17 @@ li:hover {
     animation-fill-mode: forwards;
 }
 
+#aloita {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    border: 2px solid;
+    margin: 10px;
+}
+
 section{
     padding: 20px;
 }
