@@ -112,7 +112,7 @@ let points = 0;
 
 showQuestion();
 
-/*function answer(e){
+function answer(e){
     e.preventDefault();
 
 
@@ -123,5 +123,14 @@ showQuestion();
 
         console.log("Points: ", points);
 }
-}*/
+  nextQuestion();
+}
+
+function nextQuestion ()  {
+    if (currentQuestion <= questions.length)
+      {currentQuestion++}
+      showQuestion();
+      
+      
+}
    
