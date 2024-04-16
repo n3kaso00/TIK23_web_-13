@@ -103,6 +103,21 @@ a {
             perspective: 500px;
         }
 
+    
+
+        
+        .item {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1em;
+            background:#f0ead2;
+            transition: 0.25s;
+        }
+
  /* footer */
 
  section{
