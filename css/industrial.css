@@ -103,9 +103,6 @@ a {
             perspective: 500px;
         }
 
-    
-
-        
         .item {
             position: relative;
             width: 100px;
@@ -115,8 +112,30 @@ a {
             align-items: center;
             font-size: 1em;
             background:#f0ead2;
+            transform: rotateY(180deg);
             transition: 0.25s;
         }
+
+        .item.boxOpen {
+           transform: rotateY(0deg); 
+        }
+
+        .item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: #f0ead2;
+            transition: 0.25s;
+            transform: rotateY(0deg);
+            backface-visibility: hidden;
+            direction: ltr;
+        }
+
+        .boxOpen:after {
+            transform: rotateY(180deg);
+        }
+
+
 
  /* footer */
 
