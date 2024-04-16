@@ -16,15 +16,15 @@ body {
 
 .about-us {
     position: absolute;
-    bottom: 700px;
-    top: 150px;
-    right: 70px;
-    left: 70px;
-    padding-left: 20px; 
-    padding-right: 20px;
+    max-width: 80%;
+    top: 10%;
+    max-height: 60%;
+    left: 34%;
+    padding: 20px;
     color: black;
     background-color:#f0ead2; 
     border-radius: 20px;
+    text-align: center;
     
     
 }

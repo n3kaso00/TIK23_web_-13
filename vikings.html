@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/vikings.css">
+    <script src="/js/vikings.js" defer></script>
     <title>Viikingit</title>
 </head>
 <body>
@@ -50,40 +51,41 @@
     
         </div>
     
-    <div id="textbox">
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        </p>
+        <div id="triviabox">
+        </div>
+
+
+
+        <div id="answerbox">
+        
+
+        <form id="answerform">
+            <input type="radio" name="selection" class="choice"  value="0" checked />
+            <label class="choice-label"></label>
+
+            <input type="radio" name="selection" class="choice"  value="1" />
+            <label class="choice-label"></label>
+
+            <input type="radio" name="selection" class="choice"  value="2" />
+            <label class="choice-label"></label>
+
+            
+
+            <input type="submit" value="Seuraava" id="answer">
+          
+
+        </form>
+        </div>
+
+
+    <div id="feedbackbox">
+        <p>sasdfasdfasdfasdfas</p>
     </div>
 
-
-
-    <div id="mediabox">
-
-        <p>Valitse yksi kolmesta allaolevasta vaihtoehdosta:</p>
-
-        <div>
-            <input type="radio" id="a" name="selection" value="a" />
-            <label>A:</label>
-            <p id="answer_a"></p>
-      
-            <input type="radio" id="b" name="selection" value="b" />
-            <label>B:</label>
-            <p id="answer_b"></p>
-      
-            <input type="radio" id="c" name="selection" value="c" />
-            <label>C:</label>
-            <p id="answer_c"></p>
-
-            <button id="answer">OK</button>
-          </div>
-
-    </div>
 
     
-
+   
+   
     <section class="footer">
         <div class="footer-content">
             <img src="x">
@@ -92,9 +94,10 @@
             <p>2024</p>
         </div>
     </section>
+    
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-    <script src="/js/mainpage.js"></script>
+    
+    
 </body>
 </html>
