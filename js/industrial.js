@@ -3,6 +3,8 @@ const words = ['Rautatie', 'Rautatie', 'Höyrylaiva', 'Höyrylaiva', 'Kutomakone
 var shuf_words = words.sort(() => (Math.random() > .5) ? 2 : -1);
 
 var gameContainer = document.querySelector('.game');
+var tries = 0;
+var points = 0;
 
 for ( var i = 0; i< words.length; i++){
 
@@ -14,6 +16,7 @@ for ( var i = 0; i< words.length; i++){
         this.classList.add('boxOpen')
         setTimeout(function(){
             if(document.querySelectorAll('.boxOpen').length > 1){
+                
                 if(document.querySelectorAll('.boxOpen')[0].innerHTML == document.querySelectorAll('.boxOpen')[1].innerHTML){
                     document.querySelectorAll('.boxOpen')[0].classList.add('boxMatch')
                     document.querySelectorAll('.boxOpen')[1].classList.add('boxMatch')
