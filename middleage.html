@@ -3,9 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/middleage.css">
+    <title>Historiapelit</title>
 </head>
 <body>
+    <div id="header">
+        <a href="./index.html"> <h1>Historiapelit</h1></a>
+    </div>
+ 
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button"
+                 data-bs-toggle="collapse"
+                 data-bs-target="#mainmenu"
+                 aria-controls="mainmenu"
+                 aria-expanded="false"
+                 aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse justify-content-center" id="mainmenu">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="./index.html">Etusivu</a></li>
+                <li class="nav-item"><a class="nav-link" href="./rome.html">Muinainen Rooma</a></li>
+                <li class="nav-item"><a class="nav-link" href="./egypt.html">Muinainen Egypti</a></li>
+                <li class="nav-item"><a class="nav-link" href="./vikings.html">Viikingit</a></li>
+                <li class="nav-item"><a class="nav-link" href="./middleage.html">Keskiaika</a></li>
+                <li class="nav-item"><a class="nav-link" href="./renaissance.html">Renessanssin aika</a></li>
+                <li class="nav-item"><a class="nav-link" href="./industrial.html">Teollinen aikakausi</a></li>
+                <li class="nav-item"><a class="nav-link" href="./points.html">Kokonaispisteet</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+
+    <h1>Yhdistä siirtämällä, mikä kuva liittyy keskiaikaan</h1>
+
+    <main class="container">
+        <div>
+            <ul class="draggable-list">
+                <li id="kuva1" draggable="ture"> <img src="..." alt="kuva"></li>
+                <li id="kuva2" draggable="ture"> <img src="..." alt="kuva"></li>
+                <li id="kuva3" draggable="ture"> <img src="..." alt="kuva"></li>
+                <li id="kuva4" draggable="ture"> <img src="..." alt="kuva"></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="draggable-list">
+                <li id="kuva5" draggable="ture">KESKIAIKA</li>
+            </ul>
+        </div>
+        <div>
+            <ul class="draggable-list">
+                <li id="kuva5" draggable="ture"> <img src="..." alt="kuva"></li>
+                <li id="kuva6" draggable="ture"> <img src="..." alt="kuva"></li>
+                <li id="kuva7" draggable="ture"> <img src="..." alt="kuva"></li>
+                <li id="kuva8" draggable="ture"> <img src="..." alt="kuva"></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="draggable-list">
+                <li id="kuva5" draggable="ture">KESKIAIKA</li>
+            </ul>
+        </div>
+        <div>
+            <ul class="draggable-list">
+                <li id="kuva9" draggable="ture"> <img src="..." alt="kuva"></li>
+                <li id="kuva10" draggable="ture"> <img src="..." alt="kuva"></li>
+                <li id="kuva11" draggable="ture"> <img src="..." alt="kuva"></li>
+                <li id="kuva12" draggable="ture"> <img src="..." alt="kuva"></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="draggable-list">
+                <li id="kuva5" draggable="ture">KESKIAIKA</li>
+            </ul>
+        </div>
+        <div>
+            <ul class="draggable-list">
+                <li id="kuva13" draggable="ture"> <img src="..." alt="kuva"></li>
+                <li id="kuva14" draggable="ture"> <img src="..." alt="kuva"></li>
+                <li id="kuva15" draggable="ture"> <img src="..." alt="kuva"></li>
+                <li id="kuva16" draggable="ture"> <img src="..." alt="kuva"></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="draggable-list">
+                <li id="kuva5" draggable="ture">KESKIAIKA</li>
+            </ul>
+        </div>
+    </main>
+
+    <div id="endMessage">
+         <h3>Oikea vastaus</h3>
+         <table>
+            <tr>
+                <th>...</th>
+                <th>...</th>
+            </tr>
+         </table>
+    </div>
+
+    <section class="footer">
+        <div class="footer-content">
+            <h4>Info</h4>
+            <li><a href="./info2.html">Tietoa nettisivujen tekijöistä</a></li>
+            <p>2024</p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="./js/mainpage.js"></script>
     
 </body>
 </html>
