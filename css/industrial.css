@@ -112,7 +112,6 @@ a {
             align-items: center;
             font-size: 1em;
             background:#f0ead2;
-            transform: rotateY(180deg);
             transition: 0.25s;
         }
 
@@ -128,10 +127,9 @@ a {
             transition: 0.25s;
             transform: rotateY(0deg);
             backface-visibility: hidden;
-            direction: ltr;
         }
 
-        .boxOpen:after {
+        .boxOpen:after, .boxMatch:after {
             transform: rotateY(180deg);
         }
 
