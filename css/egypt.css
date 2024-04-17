@@ -46,6 +46,11 @@ a {
     }
 }
 
+img {
+    float: left;
+    margin-top: 50px;
+}
+
 img:hover {
     animation-name: hovershadow;
     animation-duration: 0.5s;
