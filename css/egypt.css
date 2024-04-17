@@ -69,21 +69,50 @@ li:hover {
     animation-fill-mode: forwards;
 }
 
-.container {
-    background-color: white;
-    border-radius: 8px;
+#quiz {
+    max-width: 400px;
+    margin: 0 auto;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-    border: 2px solid;
-    color:#3a2618;
+    background-color: #3a2618;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 150px;
-
 }
+
+h2 {
+    text-align: center;
+    color: #f0ead2;
+}
+
+#kysymys {
+    margin-bottom: 20px;
+}
+
+#vaihtoehdot {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2,1fr);
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #f0ead2;
+    color: #3a2618;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8f8d8d
+}
+
+
+
+
 
 section{
     padding: 20px;
