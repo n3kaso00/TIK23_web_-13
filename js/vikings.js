@@ -118,7 +118,8 @@ const questions = [
 let currentQuestion = 0;
 let points = 0;
 
-  
+/*Displays pre-defined media to elements on loading the page, and defines index
+ number to each radiobutton*/
 
   function showQuestion() {
 
@@ -141,9 +142,13 @@ let points = 0;
 }
 showQuestion();
 
-/*-----------------------------------------------------------------------------------*/
+/*Adds submit functionality to function answer*/
 
 document.getElementById('answerform').addEventListener('submit', answer);
+
+/* Defines function answer, prevents default page refresh from button, makes data acquirable from form,
+checks if answer is correct, gives points for correct answer and sets pre-defined feedback to be displayed
+if the answer is correct/wrong, also displays next question with 10 sec delay*/
 
 function answer(e){
     e.preventDefault();
@@ -166,13 +171,11 @@ setTimeout(nextQuestion, 10000);
 }
 
 
-/*-----------------------------------------------------------------------------------*/
+/*nextQuestion checks if there are any questions left in the pool and displays next Q*/
 
 function nextQuestion ()  {
     if (currentQuestion <= questions.length)
       {currentQuestion++}
-      showQuestion();
-      
-      
+      showQuestion();   
 }
    
