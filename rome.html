@@ -37,20 +37,60 @@
         </div>
         </nav>
 
-        <div class="wrapper">
-            <h1>Mitä on kuvassa?</h1> 
-            <div class="content">
-                <input type="text" class="typing-input" maxlength="1">
-                <div class="details">
-                    <p class="hint">Hint:<span></span></p>
-                    <p class="guess-left">Jäljellä olevia arvauksia:<span>10</span></p>
-                    <p class="wrong-letter">Väärät kirjaimet: <span>kirjaimet</span></p>
+        <h1> Palapeli</h1>
+
+        <div class="game-content">
+
+            <div class="drag" id="drag">
+                <div class="dragBox">
+                    <div class="images" draggable="true" id="block1"
+                    style="--img:url(1.png);"></div>
                 </div>
-                <div>
-                    <button class="reset-btn">Reset game</button>
+                <div class="dragBox">
+                    <div class="images" draggable="true" id="block2"
+                    style="--img:url(2.png);"></div>
+                </div>
+                <div class="dragBox">
+                    <div class="images" draggable="true" id="block3"
+                    style="--img:url(3.png);"></div>
+                </div>
+                <div class="dragBox">
+                    <div class="images" draggable="true" id="block4"
+                    style="--img:url(4.png);"></div>
+                </div>
+                <div class="dragBox">
+                    <div class="images" draggable="true" id="block5"
+                    style="--img:url(5.png);"></div>
+                </div>
+                <div class="dragBox">
+                    <div class="images" draggable="true" id="block6"
+                    style="--img:url(6.png);"></div>
+                </div>
+                <div class="dragBox">
+                    <div class="images" draggable="true" id="block7"
+                    style="--img:url(7.png);"></div>
+                </div>
+                <div class="dragBox">
+                    <div class="images" draggable="true" id="block8"
+                    style="--img:url(8.png);"></div>
+                </div>
+                <div class="dragBox">
+                    <div class="images" draggable="true" id="block9"
+                    style="--img:url(9.png);"></div>
                 </div>
             </div>
-            
+            <div class="board">
+                <div class="dropBox"></div>
+                <div class="dropBox"></div>
+                <div class="dropBox"></div>
+                <div class="dropBox"></div>
+                <div class="dropBox"></div>
+                <div class="dropBox"></div>
+                <div class="dropBox"></div>
+                <div class="dropBox"></div>
+                <div class="dropBox"></div>
+            </div>
+            <button class="reset">Sekoita</button>
         </div>
 
         <section class="footer">
