@@ -1,59 +1,64 @@
 const quizData = [
     {
-        kysymys: "kuinka monta pyramidia oli vuonna 1990",
-        vaihtoehdot: ["kolme", "kaksi", "viisi", "kuusikymmentä"],
-        vastaus: "kolme"
+      question: "Kenen poika farao oli uskomusten mukaan?",
+      options: ["Aurinkojumala Ra:n", "Egyptin kuninkaan", "Horuksen", "Taivaan jumala Geb:in"],
+      answer: "Aurinkojumala Ra:n"
     },
     {
-        kysymys: "",
-        vaihtoehdot: [],
-        vastaus: ""
+      question: "Mitä pyramidit olivat?",
+      options: ["Faraoiden asuntoja", "Faraoiden hautapaikkoja", "Kirjureiden asuntoja", "Jumalien kokoontumispaikkoja"],
+      answer: "Faraoiden hautapaikkoja"
     },
+    {
+      question: "Mikä ammatti oli kaikkein arvostetuin Egyptissä?",
+      options: ["Rakentaja", "Pappi", "Kirjuri", "sotapäällikkö"],
+      answer: "Kirjuri"
+    }
     // Add more questions here...
-];
-
-const kysymysElement = document.getElementById("Kysymys");
-const vaihtoehdotElement = document.getElementById("Vaihtoehdot");
-const vastaaButton = document.getElementById("Vastaa");
-
-let currentkysymys = 0;
-let score = 0;
-
-function showkysymys() {
-    const Kysymys = quizData[currentkysymys];
-    kysymysElement.innerText = Kysymys.kysymys
-
-    vaihtoehdotElement.innerHTML = "";
-    Kysymys.vaihtoehdot.forEach(option => {
-        const button = document.createElement("button");
-        button.innerText = option;
-        vaihtoehdotElement.appendChild(button);
-        button.addEventListener("click", selectAnswer);
+  ];
+  
+  const questionElement = document.getElementById("question");
+  const optionsElement = document.getElementById("options");
+  const submitButton = document.getElementById("submit");
+  
+  let currentQuestion = 0;
+  let score = 0;
+  
+  function showQuestion() {
+    const question = quizData[currentQuestion];
+    questionElement.innerText = question.question;
+  
+    optionsElement.innerHTML = "";
+    question.options.forEach(option => {
+      const button = document.createElement("button");
+      button.innerText = option;
+      optionsElement.appendChild(button);
+      button.addEventListener("click", selectAnswer);
     });
-}
-
-function selectAnswer(e) {
+  }
+  
+  function selectAnswer(e) {
     const selectedButton = e.target;
-    const vastaus = quizData[currentkysymys].vastaus;
-
-    if (selectedButton.innerText === vastaus) {
-        score++;
+    const answer = quizData[currentQuestion].answer;
+  
+    if (selectedButton.innerText === answer) {
+      score++;
     }
-
-    currentkysymys++;
-
-    if (currentkysymys < quizData.length) {
-        showkysymys();
+  
+    currentQuestion++;
+  
+    if (currentQuestion < quizData.length) {
+      showQuestion();
     } else {
-        showResult();
+      showResult();
     }
-}
-
-function showResult() {
+  }
+  
+  function showResult() {
     quiz.innerHTML = `
-        <h1>Onnea, testi valmis!</h1>
-        <p>Pisteesi: ${score}/${quizData.length}</p>
-        `;
-}
-
-showkysymys();
+      <h2>Osasitko?</h2>
+      <p>Pisteet: ${score}/${quizData.length}</p>
+    `;
+  }
+  
+  showQuestion();
