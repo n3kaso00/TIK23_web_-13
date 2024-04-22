@@ -20,10 +20,21 @@ const quizData = [
   const questionElement = document.getElementById("question");
   const optionsElement = document.getElementById("options");
   const submitButton = document.getElementById("submit");
+  const time_line = document.querySelector(".time_line");
+  const timeCount = document.querySelector(".timer_sec");
   
   let currentQuestion = 0;
   let score = 0;
+  let timeValue = 15;
+  let que_count = 0;
+  let userScore = 0;
   
+  submitButton.onclick = () => {
+    startTimer(timeValue);
+    startTimerLine(widthValue);
+  }
+
+
   function showQuestion() {
     const question = quizData[currentQuestion];
     questionElement.innerText = question.question;

@@ -115,6 +115,25 @@ li:hover {
     background-color: #8f8d8d;
   }
 
+  .timer_sec {
+    font-size: 10px;
+    font-weight: 500;
+    color: #3a2618;
+    line-height: 30px;
+    text-align: center;
+    background: #f0ead2;
+    border: 1px solid;
+    user-select: none;
+  }
+
+  .time_line {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 4px;
+    background: white;
+  }
+
 
 
 
