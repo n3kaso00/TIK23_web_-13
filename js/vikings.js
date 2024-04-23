@@ -1,73 +1,3 @@
-/*Viikingit muistetaan keskuudessamme pohjoismaisina hurjina sotureina, ja useimmat
-aiheesta kertovat pelit, elokuvat ja tarinat keskittyvätkin suurimmaksi osaksi tähän
-heidän hurjaan puoleensa. Viikingit olivat kuitenkin ennen kaikkea menestyneitä kauppiaita 
-ja liikkeenharjoittajia. He saivat elantonsa pitämällä maatiloja,
-kalastamalla, metsästämällä, kauppaamalla tekemiänsä 
-tuotteita sekä valloittamalla uusia alueita. 
-
-"Mille aikavälille Viikinkien aikakausi sijoittui?"  "650-859 ,, 793-1066 ,, 823-1145"
-
-----------------------------------------------------------------------------------------------
-
-Viikingit olivat pohjimmiltaan kuitenkin maalaisyhteisöjä, joissa perhe ja oman maapalstan
-omistaminen näyttelivät tärkeintä roolia. Maan omistaminen oli kaikkein tärkeintä, koska 
-se määritteli ihmisen aseman yhteisössä. Iso perhe ja maatila olikin kaikista tavallisin 
-näky viikinkiyhteisöissä. Naiset olivat kodin ylipäälliköitä, ja miehet hoitivat 
-kaupankäynnin, pellonhoidon ja yhteiskunnalliset toiminnot.
-
-"kuuluisin viikinkikaupunki HEDEBY/Oslo/Uppsala, Hedeby suurin kauppakaupunki,
- Oslo ns. viikinkien pääkaupunki, Uppsala uskonnollinen keskus"
- 
-
------------------------------------------------------------------------------------------------
-
-Viikinkien pitämiin eläimiin kuuluivat esimerkiksi vuohet, lampaat, siat, 
-lampaat ja ankat. Niitä vaalittiin suuresti, sillä ne tuottivat Viikingeille ruokaa ja erilaisia, 
-hyötytarvikkeita. Heillä oli myös lemmikkieläimiä (koiria ja kissoja) kuten meilläkin. 
-He elivät luonnosta, kuten muutkin tuon ajan ihmiset ja muodostivat vahvan suhteen luontoon.
-
-Viikinkien jumaltarustoon kuitenkin kuului eräs tärkeä susieläin. Mikä on tämän suden nimi?
-
-"FENRIR/Jörmundgandr/Gullinbursti (selitykset puuttuu)"
-
-------------------------------------------------------------------------------------------------
-
-Viikinkien yhteiskunnassa oli kolme erilaista luokkaa kansalaisille. Ihmiset jaoteltiin Jaarleihin, 
-aatelisiin ja vapaisiin ihmisiin. Suurin erottava tekijä yhteiskunnassa oli, oliko
-henkilö vapaa ihminen vai ei. Vapaalla ihmisellä oli oikeus kantaa asetta ja 
-osallistua sekä vaikuttaa yhteiskunnan toimintoihin. Ei-vapaat ihmiset olivat yleensä 
-maatiloilla työskenteleviä orjia ja työläisiä.
-
-"kuuluisin Jaarli"
-
-------------------------------------------------------------------------------------------------
-
-Viikinkien suurimmat Jumalat olivat nimeltään Odin, Thor ja Freija. Odin muistetaan 
-erityisesti sodan jumalana. Vanha uskomus kuuluu, että Odin ratsasti kahdeksanjalkaisella
-ratsulla ja Odinilla oli vain yksi silmä, koska hän vaihtoi toisen silmänsä yhteen 
-kulaukseen juomaa viisauden lähteestä. 
-Thor muistetaan oikeuden, voiman ja taistelukenttien jumalana. Thor puolusti ihmisiä 
-jättiläisiltä. Thorilla oli myös kuuluisa vasara, ja hänen mukaansa on myös nimetty 
-viikonpäivä torstai.
-Freija muistetaan rauhan, hedelmällisyyden, sateen ja auringonpaisteen jumalana.
-
-"mikä oli thorin vasaran nimi?"
-
-
------------------------------------------------------------------------------------------------
-
-Viikingit olivat kuuluisia myös tutkimusmatkoistaan. He löysivät muun muassa Islannin 
-ja Grönlannin, sekä muodostivat näihin maihin asumuksia ja yhteiskuntia jotka 
-kestivät vuosisatojen ajan. Viikinkien vaihtokauppareitit ulottuivat jopa 
-Aasiaan saakka, ja he ovat käyneet kauppaa myös Venäjän sekä eräiden 
-lähi-idän maiden kanssa. 
-
-"Mikä oli "
-
-
-*/
-
-
 
 const questions = [
 
@@ -77,7 +7,7 @@ const questions = [
       choices: ["650-859", "793-1066", "823-1145"], 
       image: "",
       answer: 1,
-      feedback: "Vastauksesi oli oikein! ölkjölkjölkjölkjölkj"
+      feedback: "Vastauksesi oli oikein! Viikinkien aikakauden katsotaan alkaneen Lindisfarnen luostariin kohdistuneesta hyökkäyksestä vuonna 793. Viikinkiajan katsotaan loppuneen vuonna 1066, kun Norjan Kuningas Harald III Sigurdsson kukistettiin Stamfordin sillan taistelussa."
     } ,
 
 
@@ -87,7 +17,7 @@ const questions = [
         choices: ["Hedeby", "Oslo", "Uppsala"],
         image: "",
         answer: 0,
-        feedback: "asdfasdfasdfasdf"
+        feedback: "Vastauksesi oli oikein! Hedeby tunnettiin Viikinkien isoimpana kauppakaupunkina. Oslo oli viikinkien niinsanottu pääkaupunki, ja Uppsala tunnettiin heidän uskonnollisena keskuksena."
       }  ,
 
       {
@@ -95,7 +25,7 @@ const questions = [
         choices: ["Gullinbursti","Jörmundgandr","Fenrir"],
         image: "",
         answer: 2,
-        feedback: "qwerqwerqwerqwer"
+        feedback: "Vastauksesi oli oikein! Fenrir oli yksi kolmesta jumalten hirviömäisestä lapsesta, joka oli kahlittu sen hirmuisuuden takia. Jörmundgandrin taas uskottiin kietovan viikinkien maailman ympärilleen, ja nielaisevan sen vielä jonakin päivänä. Gullinbursti taas tunnettiin Jumalatar Freyan rakastettuna possuna."
       } ,
 
       {
@@ -108,11 +38,27 @@ const questions = [
 
       {
         trivia: "Viikinkien suurimmat Jumalat olivat nimeltään Odin, Thor ja Freija. Odin muistetaan erityisesti sodan jumalana. Vanha uskomus kuuluu, että Odin ratsasti kahdeksanjalkaisella ratsulla ja Odinilla oli vain yksi silmä, koska hän vaihtoi toisen silmänsä yhteen kulaukseen juomaa viisauden lähteestä. Thor muistetaan oikeuden, voiman ja taistelukenttien jumalana. Thor puolusti ihmisiä jättiläisiltä. Thorilla oli myös kuuluisa vasara, ja hänen mukaansa on myös nimetty viikonpäivä torstai. Freija muistetaan rauhan, hedelmällisyyden, sateen ja auringonpaisteen jumalana. mikä oli thorin vasaran nimi?",
-        choices: ["Skofnung","Mjölnir","Hrolf"],
+        choices: ["Skofnung","Mjölnir","Gungnir"],
         image: "",
         answer: 1,
-        feedback: "Mjölnir tunnetaan Thorin vasarana. Sitä on käytetty erilaisissa peleissä, sarjakuvissa ja elokuvissa paljon. "
-      } 
+        feedback: "Mjölnir tunnetaan Thorin vasarana. Skofnung oli legendaarien Tanskan kuninkaan Hrolf Krakin miekka. Gungnir tunnettiin Odinin keihäänä."
+      } ,
+
+      {
+        trivia: "Kristinuskossa eräs olennainen osa on kuolemanjälkeinen elämä taivaassa. Viikingit uskoivat myös tämänkaltaiseen kuolemanjälkeiseen elämään, mutta heidän uskomuksensa eroavat kristinuskosta merkittävästi. Viikingit nimittäin uskoivat, että he menevät kuoleman jälkeen Odinin luokse hänen suureen saliin nauttimaan nauttimaan loputtomista pöydistä täynnä ruokaa ja juomaa. Salin toimintaan kuului myös päivittäin käytävät taistelut, jonka jälkeen illat nautittiin ruoasta ja juomasta. KYSYMYS: Mikä oli tämän Odinin suuren salin nimi? ",
+        choices: ["Valhalla","Helheim","Jotunheim"],
+        image: "",
+        answer: 0,
+        feedback: "Vastauksesi on oikein! Valhalla oli kaikkien viikinkien lopullinen päämäärä, jossa heidän ajateltiin odottavan viikinien mytologian viimeistä taistelua, Ragnarökiä aikojen lopussa. Helheim taas oli kuolleiden valtakunta, johon menivät kaikki ne, jotka eivät päässeet Valhallaan. Jotunheim taas tunnettiin jääjättiläisten valtakuntana."
+      } ,
+
+      {
+        trivia: "",
+        choices: ["", "", ""],
+        image: "",
+        answer: 1,
+        feedback: "",
+      }
   ];
   
 let currentQuestion = 0;
