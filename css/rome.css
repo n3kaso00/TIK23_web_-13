@@ -100,6 +100,8 @@
         justify-content: center;
         align-items: center;
         background-color: #f0ead2;
+        min-height: 100vh;
+        gap: 50px;
     }
 
     .drag {
@@ -148,5 +150,9 @@
 
     .dropBox {
         position: relative;
+        width: 140px;
+        height: 140px;
+        background: #0003;
+
     }
     
