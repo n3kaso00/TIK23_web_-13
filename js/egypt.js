@@ -16,39 +16,58 @@ const quizData = [
     }
     // Add more questions here...
   ];
+
   
   const questionElement = document.getElementById("question");
   const optionsElement = document.getElementById("options");
   const submitButton = document.getElementById("submit");
-  const time_line = document.querySelector(".time_line");
-  const timeCount = document.querySelector(".timer_sec");
+  const countElement = document.getElementById("count");
+
   
   let currentQuestion = 0;
   let score = 0;
-  let timeValue = 15;
-  let que_count = 0;
-  let userScore = 0;
-  
-  submitButton.onclick = () => {
-    startTimer(timeValue);
-    startTimerLine(widthValue);
+  let count = 15;
+  let interval;
+
+  function startTimer() {
+    count = 15;
+    countElement.innerText = count;
+    interval = setInterval(function() {
+      countElement.innerText = count;
+      count--;
+      if (count === 0) {
+        clearInterval(interval);
+        document.getElementById('count').innerText = 'Done';
+        alert("You're out of time!");
+        currentQuestion++;
+        if (currentQuestion < quizData.length) {
+          showQuestion();
+        } else {
+          showResult();
+        }
+      }
+    }, 1000);
   }
-
-
-  function showQuestion() {
-    const question = quizData[currentQuestion];
-    questionElement.innerText = question.question;
   
-    optionsElement.innerHTML = "";
-    question.options.forEach(option => {
-      const button = document.createElement("button");
-      button.innerText = option;
-      optionsElement.appendChild(button);
-      button.addEventListener("click", selectAnswer);
+    function showQuestion() {
+        clearInterval(interval);
+        startTimer();
+
+        const question = quizData[currentQuestion];
+        questionElement.innerText = question.question;
+  
+        optionsElement.innerHTML = "";
+        question.options.forEach(option => {
+            const button = document.createElement("button");
+            button.innerText = option;
+            optionsElement.appendChild(button);
+            button.addEventListener("click", selectAnswer);
     });
   }
   
   function selectAnswer(e) {
+    clearInterval(interval);
+
     const selectedButton = e.target;
     const answer = quizData[currentQuestion].answer;
   
@@ -66,6 +85,7 @@ const quizData = [
   }
   
   function showResult() {
+    clearInterval(interval);
     quiz.innerHTML = `
       <h2>Osasitko?</h2>
       <p>Pisteet: ${score}/${quizData.length}</p>
