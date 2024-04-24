@@ -20,7 +20,6 @@ const quizData = [
   
   const questionElement = document.getElementById("question");
   const optionsElement = document.getElementById("options");
-  const submitButton = document.getElementById("submit");
   const countElement = document.getElementById("count");
 
   
@@ -33,21 +32,23 @@ const quizData = [
     count = 15;
     countElement.innerText = count;
     interval = setInterval(function() {
-      countElement.innerText = count;
-      count--;
-      if (count === 0) {
-        clearInterval(interval);
-        document.getElementById('count').innerText = 'Done';
-        alert("You're out of time!");
-        currentQuestion++;
-        if (currentQuestion < quizData.length) {
-          showQuestion();
+        if (count === 0) {
+            clearInterval(interval);
+            document.getElementById('count').innerText = 'Done';
+            alert("Aika loppui!");
+            currentQuestion++;
+            if (currentQuestion < quizData.length) {
+                showQuestion();
+            } else {
+                showResult();
+            }
         } else {
-          showResult();
+          count--;
+          countElement.innerText = count;
         }
-      }
-    }, 1000);
+      }, 1000);
   }
+  
   
     function showQuestion() {
         clearInterval(interval);
