@@ -1,4 +1,51 @@
 (function(){
+
+  const quizContainer = document.getElementById('quiz');
+  const resultsContainer = document.getElementById('results');
+  const submitButton = document.getElementById('submit');
+  const myQuestions = [
+    {
+      question: "Valitse oikea vastaus",
+      answers: {
+        a: "",
+        b: "",
+        c: ""
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "Valitse oikea vastaus",
+      answers: {
+        a: "",
+        b: "",
+        c: ""
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "Valitse oikea vastaus",
+      answers: {
+        a: "",
+        b: "",
+        c: "",
+      },
+      correctAnswer: "b"
+    }
+];
+
+  buildQuiz();
+
+  const previousButton = document.getElementById("previous");
+  const nextButton = document.getElementById("next");
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
+
+  showSlide(currentSlide);
+
+  submitButton.addEventListener('click', showResults);
+  previousButton.addEventListener("click", showPreviousSlide);
+  nextButton.addEventListener("click", showNextSlide);
+
   
   function buildQuiz(){
     const output = [];
@@ -59,49 +106,4 @@
     showSlide(currentSlide - 1);
   }
 
-  const quizContainer = document.getElementById('quiz');
-  const resultsContainer = document.getElementById('results');
-  const submitButton = document.getElementById('submit');
-  const myQuestions = [
-    {
-      question: "Valitse oikea vastaus",
-      answers: {
-        a: "",
-        b: "",
-        c: ""
-      },
-      correctAnswer: "c"
-    },
-    {
-      question: "Valitse oikea vastaus",
-      answers: {
-        a: "",
-        b: "",
-        c: ""
-      },
-      correctAnswer: "a"
-    },
-    {
-      question: "Valitse oikea vastaus",
-      answers: {
-        a: "",
-        b: "",
-        c: "",
-      },
-      correctAnswer: "b"
-    }
-  ];
-
-  buildQuiz();
-
-  const previousButton = document.getElementById("previous");
-  const nextButton = document.getElementById("next");
-  const slides = document.querySelectorAll(".slide");
-  let currentSlide = 0;
-
-  showSlide(currentSlide);
-
-  submitButton.addEventListener('click', showResults);
-  previousButton.addEventListener("click", showPreviousSlide);
-  nextButton.addEventListener("click", showNextSlide);
 })();
