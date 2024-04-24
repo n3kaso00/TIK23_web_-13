@@ -33,7 +33,7 @@ const questions = [
         choices: ["Björn Rautakylki","Erik Punainen","Ragnar Lothbrok"],
         image: "",
         answer: 2,
-        feedback: "Ragnar Lothbrokin olemassaolosta ei ole täyttä historiallista varmuutta, mutta hänestä on puhuttu paljon, sekä hänet on yhdistetty viikinkien tarustoissa moniin eri tapahtumiin ja paikkoihin. Hänet tunnettiin tarustojen ja legendojen perusteella Tanskan ja Ruotsin kuninkaana. Ragnar Lothbrok esiintyi myös Viikingit-nimisessä sarjassa, ja sarjan ensimmäiset osat keskittyivät hänen ympärille."
+        feedback: "Vastauksesi oli oikein! Ragnar Lothbrokin olemassaolosta ei ole täyttä historiallista varmuutta, mutta hänestä on puhuttu paljon, sekä hänet on yhdistetty viikinkien tarustoissa moniin eri tapahtumiin ja paikkoihin. Hänet tunnettiin tarustojen ja legendojen perusteella Tanskan ja Ruotsin kuninkaana. Ragnar Lothbrok esiintyi myös Viikingit-nimisessä sarjassa, ja sarjan ensimmäiset osat keskittyivät hänen ympärille."
       } ,
 
       {
@@ -41,7 +41,7 @@ const questions = [
         choices: ["Skofnung","Mjölnir","Gungnir"],
         image: "",
         answer: 1,
-        feedback: "Mjölnir tunnetaan Thorin vasarana. Skofnung oli legendaarien Tanskan kuninkaan Hrolf Krakin miekka. Gungnir tunnettiin Odinin keihäänä."
+        feedback: "Vastauksesi oli oikein! Mjölnir tunnetaan Thorin vasarana. Skofnung oli legendaarien Tanskan kuninkaan Hrolf Krakin miekka. Gungnir tunnettiin Odinin keihäänä."
       } ,
 
       {
@@ -53,12 +53,38 @@ const questions = [
       } ,
 
       {
-        trivia: "",
-        choices: ["", "", ""],
+        trivia: "Viikinkien pääelinalueesta käytetään nimitystä Skandinavia. Siellä sijaitsee suurehko Skandinavian vuoristo, joka kulkee Ruotsin, Norjan ja Suomen alueella. KYSYMYS: Mitkä kolme maata olivat Viikinkien pääelinaluetta? ",
+        choices: ["Suomi, Ruotsi, Norja", " Ruotsi, Tanska, Norja", "Tanska, Ruotsi, Suomi"],
         image: "",
         answer: 1,
-        feedback: "",
+        feedback: "Vastauksesi oli oikein! Skandien vuoristo kulkee keskeltä Ruotsia, Norjaa ja Suomea, mutta virallisesti Skandinavian käsittää Ruotsin, Norjan ja Tanskan alueen.",
+      },
+
+      {
+        trivia: "Viikingit omasivat myös rakkautta taidetta ja kauneutta kohtaan, ja heidän jäämistöistään on löydetty paljon erilaisia taitavasti tehtyjä koristeita, koruja ja taideteoksia. Eräs eläin esiintyi varsinkiin sotimiseen liittyvissä esineissä; kilvissä, veneissä sekä kypärissä. KYSYMYS: Mikä tämä eläin oli?",
+        choices: ["Korppi","Susi","Käärme"],
+        image: "",
+        answer: 0,
+        feedback: "Vastauksesi oli oikein! Käärme sekä susi olivat suosittuja aiheita Viikinkien taiteessa, mutta Korppi-aiheista taidetta on löydetty eniten sotimiseen liittyvistä esineistä. Jumala Odinin kummallakin olkapäällä uskottiin istuvan korppi, ja koska Odin oli sodan jumala, korpitkin liitettiin sotimiseen liittyviin esineisiin.",
+      },
+
+      {
+        trivia:"Viikinkien ajalta on löydetty paljon erilaisia kirjoituksia, tehtynä puuhun, metalliin ja kiveen. Viikingit käyttivät riimuja meidän nykyaikaisten kirjaimien sijasta, ja niillä he kirjoittivat erilaisia tarinoita, kuvauksia tapahtumista, loitsuja ja suojataikoja. KYSYMYS: Mikä on oikea termi viikinkien käyttämistä riimuista?",
+        choices: ["Fubar","Fubark","Futhark"],
+        image: "",
+        answer: 2,
+        feedback: "Vastauksesi oli oikein! Viikinkiajalla käytettiin Futhark-nimellä tunnettuja riimuja. Riimuja oli alunperin 24 kappaletta, mutta kielen muuttuessa ajan mittaan monimutkaisemmaksi, riimuja poistettiin ja jäljelle jäi 16 erilaista riimua kirjoitusta varten.",
+      } ,
+
+      {
+        trivia: "Viikingit käyttivät liikkumiseen muunmuassa hevosia, vankkureita, laivoja, ja jopa suksia sekä luistimia. Isojen asutusten sijaitessa pääosin rannikolla veden äärellä, erilaisia laivoja ja veneitä käytettiin todella paljon liikkumiseen kaupunkien ja kylien välillä. Laivat lastattiin erilaisilla tavaroilla, joita myytiin ja vaihdettiin toisissa kylissä. KYSYMYS: Miksi kutsuttiin perinteistä liikkumiseen tarkoitettua venettä?",
+        choices: ["Uisko", "Viikinkilaiva", "Pitkävene"],
+        image: "",
+        answer: 2,
+        feedback: "Vastauksesi oli oikein! Pitkäveneestä oli olemassa monta erilaista versiota. Airot kuuluivat jokaiseen erilaiseen venemalliin, ja niihin voitiin lisätä pituutta, leveyttä sekä purjeet, jolloin niillä voitiin matkusta pitempiä matkoja. Viikinkien pitkäveneistä muokatuilla viikinkilaivoilla on käyty esimerkiksi Amerikassa asti.",
       }
+
+
   ];
   
 let currentQuestion = 0;
