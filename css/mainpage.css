@@ -39,6 +39,11 @@ a {
     }
 }
 
+#timeline img {
+    width: 100%;
+    
+}
+
 li:hover {
     animation-name: shadow;
     animation-duration: 1s;
