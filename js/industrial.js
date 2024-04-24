@@ -6,15 +6,7 @@ var gameContainer = document.querySelector('.game');
 var tries = 0;
 var points = 0;
 
-function showPopup(message) {
-    var popupOverlay = document.getElementById('popupOverlay');
-    var popupContent = document.getElementById('popupContent');
-    popupContent.textContent = message;
-    popupOverlay.style.display = 'block';
-    setTimeout(function() {
-        popupOverlay.style.display = 'none';
-    }, 100000); // Adjust the timeout as needed
-}
+
 
 for ( var i = 0; i< words.length; i++){
 
@@ -36,8 +28,6 @@ for ( var i = 0; i< words.length; i++){
 
                     if(document.querySelectorAll('.boxMatch').length == words.length){
                         alert('win')
-                    } else {
-                        showPopup('Matched pair')
                     }
                     
                 } else {
@@ -47,6 +37,16 @@ for ( var i = 0; i< words.length; i++){
             }
         },500)
     }
+
+let popup = document.getElementById("popup");
+
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
 
     
 
