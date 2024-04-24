@@ -4,6 +4,14 @@
         h1 {
             margin: 0px;
          }
+
+         #headline {
+            text-align: center;
+            margin-top: 20px;
+            color: #3a2618;
+            text-transform: uppercase;
+
+         }
         
          #header {
             text-align: center;
@@ -63,7 +71,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        position: absolute;
+        margin-top: auto;
     }
     
     .footer-content h4{
@@ -100,7 +108,7 @@
         justify-content: center;
         align-items: center;
         background-color: #f0ead2;
-        min-height: 100vh;
+        min-height: 85vh;
         gap: 50px;
     }
 
@@ -133,8 +141,8 @@
     .reset {
         padding: 15px 25px;
         border: none;
-        background: #fff;
-        color: #222;
+        background: #3a2618;
+        color: #f0ead2;
         font-size: 1em;
         font-weight: 500;
         text-transform: uppercase;
@@ -154,5 +162,20 @@
         height: 140px;
         background: #0003;
 
+    }
+
+    .score {
+        padding: 15px 25px;
+        border: none;
+        background: #3a2618;
+        color: #f0ead2;
+        font-size: 1em;
+        font-weight: 500;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .scorecount {
+        
     }
     
