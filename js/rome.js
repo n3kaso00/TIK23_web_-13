@@ -12,13 +12,20 @@ function drop(event){
     event.target.appendChild(document.getElementById(data));
 }
 
-let parent = document.getElementById('drag');
-let frag = document.createDocumentFragment();
-while (parent.children.lenght){
-    frag.appendChild(parent.children[Math.floor(Math.random() * parent.children.lenght)])
-}
-parent.appendChild(frag);
+document.addEventListener('DOMContentLoaded', function() {
+    let parent = document.getElementById('drag');
+    let frag = document.createDocumentFragment();
+    while (parent.children.length) {
+        frag.appendChild(parent.children[Math.floor(Math.random() * parent.children.length)]);
+    }
+    parent.appendChild(frag);
 
-document.querySelector('.reset').addEventListener('click', function() {
-    window.location.reload ()
+    document.querySelector('.reset').addEventListener('click', function() {
+        window.location.reload();
+    });
 });
+
+
+
+
+

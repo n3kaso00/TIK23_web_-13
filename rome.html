@@ -37,46 +37,46 @@
         </div>
         </nav>
 
-        <h1> Palapeli</h1>
+        <h1 id="headline"> Ratkaise palapeli</h1>
 
         <div class="game-content">
 
             <div class="drag" id="drag">
                 <div class="dragBox">
                     <div class="images" draggable="true" ondragstart="drag(event)" id="block1"
-                    style="--img:url(1.png);"></div>
+                    style="background-image: url('./images/rome1.jpg');"></div>
                 </div>
                 <div class="dragBox">
                     <div class="images" draggable="true" ondragstart="drag(event)" id="block2"
-                    style="--img:url(2.png);"></div>
+                    style="background-image: url('./images/rome2.jpg');"></div>
                 </div>
                 <div class="dragBox">
                     <div class="images" draggable="true" ondragstart="drag(event)" id="block3"
-                    style="--img:url(3.png);"></div>
+                    style="background-image: url('./images/rome3.jpg');"></div>
                 </div>
                 <div class="dragBox">
                     <div class="images" draggable="true" ondragstart="drag(event)" id="block4"
-                    style="--img:url(4.png);"></div>
+                    style="background-image: url('./images/rome4.jpg');"></div>
                 </div>
                 <div class="dragBox">
                     <div class="images" draggable="true" ondragstart="drag(event)" id="block5"
-                    style="--img:url(5.png);"></div>
+                    style="background-image: url('./images/rome5.jpg');"></div>
                 </div>
                 <div class="dragBox">
                     <div class="images" draggable="true" ondragstart="drag(event)" id="block6"
-                    style="--img:url(6.png);"></div>
+                    style="background-image: url('./images/rome6.jpg');"></div>
                 </div>
                 <div class="dragBox">
                     <div class="images" draggable="true" ondragstart="drag(event)" id="block7"
-                    style="--img:url(7.png);"></div>
+                    style="background-image: url('./images/rome7.jpg');"></div>
                 </div>
                 <div class="dragBox">
                     <div class="images" draggable="true" ondragstart="drag(event)" id="block8"
-                    style="--img:url(8.png);"></div>
+                    style="background-image: url('./images/rome8.jpg');"></div>
                 </div>
                 <div class="dragBox">
                     <div class="images" draggable="true" ondragstart="drag(event)"  id="block9"
-                    style="--img:url(9.png);"></div>
+                    style="background-image: url('./images/rome9.jpg');"></div>
                 </div>
             </div>
             <div class="board">
@@ -91,12 +91,14 @@
                 <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
             </div>
             <button class="reset">Sekoita</button>
+            <button class="score">Laske pisteet</button>
         </div>
+        <div id="scorecount">Pisteet: 0</div>
 
         <section class="footer">
             <div class="footer-content">
                 <h4>Info</h4>
-                <li><a href="./info.html">Tietoa nettisivujen tekijöistä</a></li>
+                <li><a href="./info2.html">Tietoa nettisivujen tekijöistä</a></li>
                 <p>2024</p>
             </div>
         </section>
