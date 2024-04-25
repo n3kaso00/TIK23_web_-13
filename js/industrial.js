@@ -38,74 +38,32 @@ for ( var i = 0; i< words.length; i++){
         },500)
     }
 
-let popup = document.getElementById("popup");
-
-function openPopup(modal1){
-    popup.classList.add("open-popup");
-}
-
-function closePopup(modal1){
-    popup.classList.remove("open-popup");
-}
-
-function openPopup(modal2){
-    popup.classList.add("open-popup");
-}
-
-function closePopup(modal2){
-    popup.classList.remove("open-popup");
-}
-
-function openPopup(modal3){
-    popup.classList.add("open-popup");
-}
-
-function closePopup(modal3){
-    popup.classList.remove("open-popup");
-}   
-
-function openPopup(modal4){
-    popup.classList.add("open-popup");
-}
-
-function closePopup(modal4){
-    popup.classList.remove("open-popup");
-}
-
-function openPopup(modal5){
-    popup.classList.add("open-popup");
-}
-
-function closePopup(modal5){
-    popup.classList.remove("open-popup");
-}
-
-function openPopup(modal6){
-    popup.classList.add("open-popup");
-}
-
-function closePopup(modal6){
-    popup.classList.remove("open-popup");
-}
-
-function openPopup(modal7){
-    popup.classList.add("open-popup");
-}
-
-function closePopup(modal7){
-    popup.classList.remove("open-popup");
-}
-
-function openPopup(modal6){
-    popup.classList.add("open-popup");
-}
-
-function closePopup(modal8){
-    popup.classList.remove("open-popup");
-}
-
     document.querySelector('.game').appendChild(box);
 
 }
+
+var modalBtns = document.querySelectorAll('.modal-open');
+
+modalBtns.forEach(function(btn){
+    btn.onclick = function(){
+        var modal = btn.getAttribute('data-modal');
+
+        document.getElementById(modal).style.display = 'block';
+    };
+});
+
+var closeBtns = document.querySelectorAll('.modal-close');
+
+closeBtns.forEach(function(btn){
+    btn.onclick = function(){
+        var modal = btn.closest('.modal').style.display = 'none';
+    };
+});
+
+window.onclick = function(e){
+    if(e.target.classList.constains('modal')){
+        e.target.style.display = 'none';
+    }
+};
 
 
