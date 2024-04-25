@@ -21,12 +21,29 @@ const quizData = [
   const questionElement = document.getElementById("question");
   const optionsElement = document.getElementById("options");
   const countElement = document.getElementById("count");
+  const startButton = document.getElementById('start');
+  const restartButton = document.getElementById('restart');
 
+  startButton.addEventListener('click', startGame);
+  restartButton.addEventListener('click', restartGame);
+  
+  function startGame() {
+    startButton.style.display = 'none';
+    showQuestion(); // kysymys aloita-napin painalluksen jälkeen
+  }
+
+  function restartGame() {
+    currentQuestion = 0;
+    score = 0;
+    restartButton.classList.toggle('show');
+  }
   
   let currentQuestion = 0;
   let score = 0;
   let count = 15;
   let interval;
+
+// Timerin toiminta ..
 
   function startTimer() {
     count = 15;
@@ -84,13 +101,15 @@ const quizData = [
       showResult();
     }
   }
-  
+  // lopputekstit..
+
   function showResult() {
     clearInterval(interval);
     quiz.innerHTML = `
       <h2>Osasitko?</h2>
       <p>Pisteet: ${score}/${quizData.length}</p>
-    `;
+    `
   }
+
+    
   
-  showQuestion();

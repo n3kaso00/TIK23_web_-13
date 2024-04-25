@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,50 +8,59 @@
     <link rel="stylesheet" href="css/egypt.css">
     <title>Egypti</title>
 </head>
+
 <body>
     <div id="header">
-        <a href="./index.html"> <h1>Historiapelit</h1></a>
+        <a href="./index.html">
+            <h1>Historiapelit</h1>
+        </a>
     </div>
 
     <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainmenu"
-                aria-controls="mainmenu"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainmenu"
+                aria-controls="mainmenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-        <div class="collapse navbar-collapse justify-content-center" id="mainmenu">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="./index.html">Etusivu</a></li>
-                <li class="nav-item"><a class="nav-link" href="./rome.html">Muinainen Rooma</a></li>
-                <li class="nav-item"><a class="nav-link" href="./egypt.html">Muinainen Egypti</a></li>
-                <li class="nav-item"><a class="nav-link" href="./vikings.html">Viikingit</a></li>
-                <li class="nav-item"><a class="nav-link" href="./middleage.html">Keskiaika</a></li>
-                <li class="nav-item"><a class="nav-link" href="./renaissance.html">Renessanssin aika</a></li>
-                <li class="nav-item"><a class="nav-link" href="./industrial.html">Teollinen aikakausi</a></li>
-                <li class="nav-item"><a class="nav-link" href="./points.html">Kokonaispisteet</a></li>
-            </ul>
-        </div>
+            <div class="collapse navbar-collapse justify-content-center" id="mainmenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Etusivu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./rome.html">Muinainen Rooma</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./egypt.html">Muinainen Egypti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./vikings.html">Viikingit</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./middleage.html">Keskiaika</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./renaissance.html">Renessanssin aika</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./industrial.html">Teollinen aikakausi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./points.html">Kokonaispisteet</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <div id="quiz">
-        <h2>Testaa taitosi</h2>
-        <div id="question"></div>
-        <div id="options"></div>
-        <div id="count">Start</div>
+        <div id="quizcontent">
+            <h2>Testaa taitosi</h2>
+            <p>Sinulla on 15 sekuntia aikaa vastata per kysymys</p>
+            <button id="start">
+                Aloita peli
+            </button>
+            <div id="question"></div>
+            <div id="options"></div>
+            <div id="count"></div>
+        </div>
+
+        <button id="restart">
+            Pelaa uudelleen
+        </button>
     </div>
-    
 
 
 
 
 
-    
-    
+
+
+
 
 
 
@@ -59,6 +69,7 @@
     <script src="./js/mainpage.js"></script>
     <script src="js/egypt.js"></script>
 
-    
+
 </body>
+
 </html>
