@@ -9,15 +9,15 @@
       answers: {
         a: { 
           text: "A",
-          imagePath: "./images/keskiaika1.jpg"
+          imagePath: "./images/keskaika1.jpg"
         },
         b: { 
           text: "B",
-          imagePath: "./images/kuva2.jpg"
+          imagePath: "./images/keskiaika2.jpg"
         },
         c: { 
           text: "C",
-          imagePath: "./images/kuva3.jpg"
+          imagePath: "./images/keskiaika3.jpg"
         }
       },
       correctAnswer: "c"
@@ -27,15 +27,15 @@
       answers: {
         a: { 
           text: "A",
-          imagePath: "./images/kuva4.jpg"
+          imagePath: "./images/keskiaika4.jpg"
         },
         b: { 
           text: "B",
-          imagePath: "./images/kuva5.jpg"
+          imagePath: "./images/keskiaika5.jpg"
         },
         c: { 
           text: "C",
-          imagePath: "./images/kuva6.jpg"
+          imagePath: "./images/keskiaika6.jpg"
         }
       },
       correctAnswer: "a"
@@ -45,15 +45,15 @@
       answers: {
         a: { 
           text: "A",
-          imagePath: "./images/kuva7.jpg"
+          imagePath: "./images/keskiaika7.jpg"
         },
         b: { 
           text: "B",
-          imagePath: "./images/kuva8.jpg"
+          imagePath: "./images/keskiaika8.jpg"
         },
         c: { 
           text: "C",
-          imagePath: "./images/kuva9.jpg"
+          imagePath: "./images/keskiaika9.jpg"
         }
       },
       correctAnswer: "b"
@@ -78,7 +78,7 @@
       const answers = Object.entries(currentQuestion.answers).map(([letter, answer]) => `
         <label>
           <input type="radio" name="question${questionNumber}" value="${letter}">
-          <img src="${answer.imagePath}" alt="${answer.text}">
+          <img src="${answer.imagePath}" alt="${answer.text}" style="max-width: 100%; max-height: 100px;">
           ${letter} : ${answer.text}
         </label>
       `).join("");
