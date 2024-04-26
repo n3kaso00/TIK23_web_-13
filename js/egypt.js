@@ -23,6 +23,9 @@ const quizData = [
   const countElement = document.getElementById("count");
   const startButton = document.getElementById('start');
   const restartButton = document.getElementById('restart');
+  const quizContent = document.getElementById('quizcontent');
+  const result = document.getElementById('result');
+  const points = document.getElementById('points');
 
   startButton.addEventListener('click', startGame);
   restartButton.addEventListener('click', restartGame);
@@ -35,7 +38,9 @@ const quizData = [
   function restartGame() {
     currentQuestion = 0;
     score = 0;
-    restartButton.classList.toggle('show');
+    quizContent.classList.remove('hidden');
+    result.classList.add('hidden');
+    showQuestion();
   }
   
   let currentQuestion = 0;
@@ -105,11 +110,11 @@ const quizData = [
 
   function showResult() {
     clearInterval(interval);
-    quiz.innerHTML = `
-      <h2>Osasitko?</h2>
-      <p>Pisteet: ${score}/${quizData.length}</p>
-    `
+    points.textContent =`${score}/${quizData.length}`;
+    quizContent.classList.add('hidden');
+    result.classList.remove('hidden');
   }
+  
 
     
   

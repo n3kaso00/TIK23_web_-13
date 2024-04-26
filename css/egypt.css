@@ -2,12 +2,8 @@ h1 {
     margin: 0px;
  }
 
-/* #restart.show{
-    display: block;
-} */
-
-#restart{
-    /* display: none; */
+.hidden {
+    display: none;
 }
 
 body {
