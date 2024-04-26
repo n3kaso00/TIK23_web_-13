@@ -136,15 +136,19 @@ a {
             transform: rotateY(180deg);
         }
 
+        h4 {
+            text-align: center;
+        }
+
         .modal-open {
             padding: 8px 16px;
-            background: royalblue;
-            color: white;
+            background: #3a2618;
+            color: #f0ead2;
             border-radius: 4px;
             outline: none;
             border: none;
             margin-top: 50px;
-            margin-left: 50px;
+            margin-left: 40px;
             margin-bottom: 50px;
         }
 
@@ -154,13 +158,13 @@ a {
             left: 0;
             right: 0;
             bottom: 0;
-            background: #c7b7ab;
+            background: #f0ead2;
             z-index: 2;
             animation: modal-open .5s;
         }
 
         .modal-content {
-            background: #fff;
+            background: #3a2618;
             margin-top: 50px;
             width: 50%;
             margin-left: auto;
@@ -174,12 +178,13 @@ a {
             font-weight: 500;
             padding: 10px 0;
             font-size: 26px;
+            color: #f0ead2;
         }
 
         .modal-header .modal-close {
             float: right;
             font-size: 20px;
-            background: #efefef;
+            background: #f0ead2;
             border: 0;
             outline: 0;
             padding: 5px 8px;
@@ -187,7 +192,7 @@ a {
         }
 
         .modal-body {
-            color: #7b7b7b;
+            color: #f0ead2;
             padding: 15px 0;
         }
 
@@ -201,7 +206,8 @@ a {
             border: none;
             outline: none;
             border-radius: 4px;
-            color: #1a73e8;
+            color: #3a2618;
+            background-color: #f0ead2;
         }
 
         @keyframes modal-open {
