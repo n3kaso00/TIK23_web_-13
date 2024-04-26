@@ -13,6 +13,11 @@ const quizData = [
       question: "Mikä ammatti oli kaikkein arvostetuin Egyptissä?",
       options: ["Rakentaja", "Pappi", "Kirjuri", "sotapäällikkö"],
       answer: "Kirjuri"
+    },
+    {
+      question: "Minkä vuoksi egyptiläiset palsamoivat vainajansa?",
+      options: ["Jotta vainajan ruumis säilyisi kuoleman jälkeen", "Jotta papeilla olisi lisää töitä"],
+      answer: "Jotta vainajan ruumis säilyisi kuoleman jälkeen"
     }
     // Add more questions here...
   ];
@@ -52,7 +57,7 @@ const quizData = [
 
   function startTimer() {
     count = 15;
-    countElement.innerText = count;
+    countElement.innerText = `Aikaa jäljellä: ${count}`;
     interval = setInterval(function() {
         if (count === 0) {
             clearInterval(interval);
@@ -66,7 +71,7 @@ const quizData = [
             }
         } else {
           count--;
-          countElement.innerText = count;
+          countElement.innerText = `Aikaa jäljellä: ${count}`;
         }
       }, 1000);
   }
