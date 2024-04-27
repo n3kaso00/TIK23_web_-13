@@ -67,6 +67,7 @@ a {
             gap: 30px;
             background: #f0ead2;
             padding: 40px 60px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
         h2 {
@@ -136,6 +137,20 @@ a {
             transform: rotateY(180deg);
         }
 
+        #pointsDisplay {
+            text-align: center;
+            color: #3a2618;
+            font-size: large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #triesDisplay {
+            text-align: center;
+            color: #3a2618;
+            font-size: large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
         h4 {
             text-align: center;
         }
@@ -149,12 +164,8 @@ a {
             border: none;
             margin-top: 50px;
             margin-left: 40px;
-            margin-bottom: 50px;
+            margin-bottom: 100px;
             transition: background-color 0.3s, color 0.3s;
-        }
-
-        .modal-open:hover {
-
         }
 
         .modal {
@@ -168,7 +179,7 @@ a {
         }
 
         .modal-content {
-            background: #3a2618;
+            background: #4e3421;
             margin-top: 50px;
             width: 50%;
             margin-left: auto;
@@ -224,6 +235,19 @@ a {
                 opacity: 1;
             }
         }
+
+        @keyframes hovershadow {
+            to {
+                box-shadow: 0 0 25px rgb(87, 41, 21);
+            }
+        }
+        
+        .modal-open:hover {
+            animation-name: hovershadow;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+        
 
 
 

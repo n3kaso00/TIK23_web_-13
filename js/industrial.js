@@ -15,27 +15,45 @@ for ( var i = 0; i< words.length; i++){
     box.innerHTML = shuf_words[i]
 
     box.onclick = function() {
+
+        
+
         this.classList.add('boxOpen')
         setTimeout(function(){
             if(document.querySelectorAll('.boxOpen').length > 1){
                 
                 if(document.querySelectorAll('.boxOpen')[0].innerHTML == document.querySelectorAll('.boxOpen')[1].innerHTML){
-                    document.querySelectorAll('.boxOpen')[0].classList.add('boxMatch')
-                    document.querySelectorAll('.boxOpen')[1].classList.add('boxMatch')
+                    document.querySelectorAll('.boxOpen')[0].classList.add('boxMatch');
+                    document.querySelectorAll('.boxOpen')[1].classList.add('boxMatch');
+
+                    points++,
+                    updatePoints();
 
                     document.querySelectorAll('.boxOpen')[1].classList.remove('boxOpen')
                     document.querySelectorAll('.boxOpen')[0].classList.remove('boxOpen')
 
                     if(document.querySelectorAll('.boxMatch').length == words.length){
-                        alert('win')
+                        alert('Voitit!')
                     }
                     
                 } else {
+
+                    tries++;
+                    updateTries();
+
                     document.querySelectorAll('.boxOpen')[1].classList.remove('boxOpen')
                     document.querySelectorAll('.boxOpen')[0].classList.remove('boxOpen')
                 }
             }
         },500)
+    }
+
+    function updateTries() {
+        document.getElementById('triesDisplay').innerHTML = 'Yritykset: ' + tries;
+    }
+
+    function updatePoints() {
+        document.getElementById('pointsDisplay').innerHTML = 'Pisteesi: ' + points;
     }
 
     document.querySelector('.game').appendChild(box);
