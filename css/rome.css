@@ -164,7 +164,7 @@
 
     }
 
-    .score {
+    .scorebutton {
         padding: 15px 25px;
         border: none;
         background: #3a2618;
@@ -175,7 +175,4 @@
         cursor: pointer;
     }
 
-    .scorecount {
-        
-    }
     

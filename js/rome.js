@@ -28,4 +28,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+function calculateScore() {
+    let score = 0;
 
+    const dragBoxes = document.querySelectorAll('.dragBox .images');
+
+    dragBoxes.forEach(dragBox => {
+        const pieceId = dragBox.id;
+        const dropBox = document.querySelector(`.dropBox[data-box="${pieceId}"]`);
+        if (dropBox && dropBox.classList.contains('correctDrop')) {
+            score++;
+        }
+    });
+
+    const scoreDisplay = document.getElementById('score');
+    scoreDisplay.textContent = `Pisteet: ${score}`;
+}
