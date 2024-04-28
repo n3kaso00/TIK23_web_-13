@@ -183,8 +183,10 @@
         }
       },
       correctAnswer: "B"
-    }
+    },
   ];
+
+  const finalSlide = document.getElementById('final-slide');
 
   buildQuiz();
 
@@ -218,9 +220,9 @@
       `;
     });
   
+    output.push(finalSlide.outerHTML);
     quizContainer.innerHTML = output.join('');
-  } 
- 
+  }
 
   function showResults(){
     const answerContainers = quizContainer.querySelectorAll('.answers');
