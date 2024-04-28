@@ -80,8 +80,8 @@
       question: "Valitse oikea vastaus",
       answers: {
         A: { 
-          text: "(Notre Damen katedraali)",
-          imagePath: "./images/keskiaika5.jpg"
+          text: "",
+          imagePath: "./images/keskiaika7.jpg"
         },
         B: { 
           text: "",
@@ -124,8 +124,8 @@
           imagePath: "./images/keskiaika27.jpg"
         },
         C: { 
-          text: "",
-          imagePath: "./images/keskiaika7.jpg"
+          text: "(Notre Damen katedraali)",
+          imagePath: "./images/keskiaika5.jpg"
         }
       },
       correctAnswer: "C"
@@ -205,7 +205,7 @@
         <label>
           <input type="radio" name="question${questionNumber}" value="${letter}">
           <span>${letter} : ${answer.text}</span>
-          <img src="${answer.imagePath}" alt="${answer.text}" style="max-width: 100%; max-height: 100px;">
+          <img src="${answer.imagePath}" alt="${answer.text}" style="max-width: 100%; max-height: 200px;">
           
         </label>
       `).join("");
@@ -229,11 +229,19 @@
     myQuestions.forEach((currentQuestion, questionNumber) => {
       const answerContainer = answerContainers[questionNumber];
       const selector = `input[name=question${questionNumber}]:checked`;
-      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+      const answerOptions = answerContainer.querySelectorAll(selector);
 
-      if(userAnswer === currentQuestion.correctAnswer){
+      answerOptions.forEach(option => {
+      const optionValue = option.value;
+
+      if (optionValue === currentQuestion.correctAnswer) {
+        option.parentNode.style.color = 'lightgreen';
         numCorrect++;
-    }        
+      } else {
+        option.parentNode.style.color = 'red'; 
+        }
+
+      });
     });
 
     resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
