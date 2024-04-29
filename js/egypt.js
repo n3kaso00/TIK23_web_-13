@@ -31,13 +31,14 @@ const quizData = [
   const quizContent = document.getElementById('quizcontent');
   const result = document.getElementById('result');
   const points = document.getElementById('points');
-  const instructions = document.getElementById('instructions');
 
   startButton.addEventListener('click', startGame);
   restartButton.addEventListener('click', restartGame);
   
   function startGame() {
     startButton.style.display = 'none';
+    document.querySelector('#quizcontent span').innerText = '';
+    document.querySelector('#quizcontent h2').innerText = '';
     showQuestion(); // kysymys aloita-napin painalluksen jälkeen
   }
 
