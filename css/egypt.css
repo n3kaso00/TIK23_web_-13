@@ -118,30 +118,7 @@ li:hover {
     background-color: #8f8d8d;
   }
 
-  .timer_sec {
-    font-size: 10px;
-    font-weight: 500;
-    color: #3a2618;
-    line-height: 30px;
-    text-align: center;
-    background: #f0ead2;
-    border: 1px solid;
-    user-select: none;
-  }
-
-  .time_line {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    height: 4px;
-    background: white;
-  }
-
-
-
-
-
-section{
+section{ 
     padding: 20px;
 }
 
@@ -149,11 +126,13 @@ section{
     background-color: #3a2618;
     text-align: center;
     padding: 10px;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     gap: 3.5rem;
     left: 0;
     right: 0;
     bottom: 0;
+   
 }
 
 .footer-content h4{

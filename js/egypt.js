@@ -31,6 +31,7 @@ const quizData = [
   const quizContent = document.getElementById('quizcontent');
   const result = document.getElementById('result');
   const points = document.getElementById('points');
+  const instructions = document.getElementById('instructions');
 
   startButton.addEventListener('click', startGame);
   restartButton.addEventListener('click', restartGame);
@@ -50,13 +51,13 @@ const quizData = [
   
   let currentQuestion = 0;
   let score = 0;
-  let count = 15;
+  let count = 20;
   let interval;
 
 // Timerin toiminta ..
 
   function startTimer() {
-    count = 15;
+    count = 20;
     countElement.innerText = `Aikaa jäljellä: ${count}`;
     interval = setInterval(function() {
         if (count === 0) {
@@ -101,7 +102,12 @@ const quizData = [
   
     if (selectedButton.innerText === answer) {
       score++;
+      alert("oikein!");
+    } else {
+
+      alert("Väärin. Oikea vastaus oli: " + answer)
     }
+    
   
     currentQuestion++;
   
