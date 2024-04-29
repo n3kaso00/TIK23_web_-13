@@ -8,6 +8,7 @@ var points = 0;
 
 
 
+
 for ( var i = 0; i< words.length; i++){
 
     let box = document.createElement('div')
@@ -15,27 +16,44 @@ for ( var i = 0; i< words.length; i++){
     box.innerHTML = shuf_words[i]
 
     box.onclick = function() {
+
+        tries++;
+        updateTries();
+
         this.classList.add('boxOpen')
+        
         setTimeout(function(){
             if(document.querySelectorAll('.boxOpen').length > 1){
                 
                 if(document.querySelectorAll('.boxOpen')[0].innerHTML == document.querySelectorAll('.boxOpen')[1].innerHTML){
-                    document.querySelectorAll('.boxOpen')[0].classList.add('boxMatch')
-                    document.querySelectorAll('.boxOpen')[1].classList.add('boxMatch')
+                    document.querySelectorAll('.boxOpen')[0].classList.add('boxMatch');
+                    document.querySelectorAll('.boxOpen')[1].classList.add('boxMatch');
+
+                    points++,
+                    updatePoints();
 
                     document.querySelectorAll('.boxOpen')[1].classList.remove('boxOpen')
                     document.querySelectorAll('.boxOpen')[0].classList.remove('boxOpen')
 
                     if(document.querySelectorAll('.boxMatch').length == words.length){
-                        alert('win')
+                        alert('Voitit pelin! Pisteesi: ' + points + ' Yritykset: ' + tries)
                     }
                     
                 } else {
+
                     document.querySelectorAll('.boxOpen')[1].classList.remove('boxOpen')
                     document.querySelectorAll('.boxOpen')[0].classList.remove('boxOpen')
                 }
             }
         },500)
+    }
+
+    function updateTries() {
+        document.getElementById('triesDisplay').innerText = 'Yritykset: ' + tries;
+    }
+
+    function updatePoints() {
+        document.getElementById('pointsDisplay').innerHTML = 'Pisteesi: ' + points;
     }
 
     document.querySelector('.game').appendChild(box);
@@ -65,5 +83,7 @@ window.onclick = function(e){
         e.target.style.display = 'none';
     }
 };
+
+
 
 

@@ -7,58 +7,186 @@
     {
       question: "Valitse oikea vastaus",
       answers: {
-        a: { 
-          text: "A",
-          imagePath: "./images/keskaika1.jpg"
+        A: { 
+          text: "",
+          imagePath: "./images/keskiaika11.jpg"
         },
-        b: { 
-          text: "B",
+        B: { 
+          text: "",
+          imagePath: "./images/keskiaika21.jpg"
+        },
+        C: { 
+          text: "",
+          imagePath: "./images/keskaika1.jpg"
+        }
+      },
+      correctAnswer: "C"
+    },
+    {
+      question: "Valitse oikea vastaus",
+      answers: {
+        A: { 
+          text: "",
           imagePath: "./images/keskiaika2.jpg"
         },
-        c: { 
-          text: "C",
+        B: { 
+          text: "",
+          imagePath: "./images/keskiaika12.jpg"
+        },
+        C: { 
+          text: "",
+          imagePath: "./images/keskiaika22.jpg"
+        }
+      },
+      correctAnswer: "A"
+    },
+    {
+      question: "Valitse oikea vastaus",
+      answers: {
+        A: { 
+          text: "",
+          imagePath: "./images/keskiaika13.jpg"
+        },
+        B: { 
+          text: "",
           imagePath: "./images/keskiaika3.jpg"
+        },
+        C: { 
+          text: "",
+          imagePath: "./images/keskiaika23.jpg"
         }
       },
-      correctAnswer: "c"
+      correctAnswer: "B"
     },
     {
       question: "Valitse oikea vastaus",
       answers: {
-        a: { 
-          text: "A",
+        A: { 
+          text: "",
+          imagePath: "./images/keskiaika24.jpg"
+        },
+        B: { 
+          text: "",
+          imagePath: "./images/keskiaika14.jpg"
+        },
+        C: { 
+          text: "(Canterburyn tuomiokirkko)",
           imagePath: "./images/keskiaika4.jpg"
-        },
-        b: { 
-          text: "B",
-          imagePath: "./images/keskiaika5.jpg"
-        },
-        c: { 
-          text: "C",
-          imagePath: "./images/keskiaika6.jpg"
         }
       },
-      correctAnswer: "a"
+      correctAnswer: "C"
     },
     {
       question: "Valitse oikea vastaus",
       answers: {
-        a: { 
-          text: "A",
+        A: { 
+          text: "",
           imagePath: "./images/keskiaika7.jpg"
         },
-        b: { 
-          text: "B",
-          imagePath: "./images/keskiaika8.jpg"
+        B: { 
+          text: "",
+          imagePath: "./images/keskiaika25.jpg"
         },
-        c: { 
-          text: "C",
-          imagePath: "./images/keskiaika9.jpg"
+        C: { 
+          text: "",
+          imagePath: "./images/keskiaika15.jpg"
         }
       },
-      correctAnswer: "b"
-    }
+      correctAnswer: "A"
+    },
+    {
+      question: "Valitse oikea vastaus",
+      answers: {
+        A: { 
+          text: "",
+          imagePath: "./images/keskiaika26.jpg"
+        },
+        B: { 
+          text: "",
+          imagePath: "./images/keskiaika6.jpg"
+        },
+        C: { 
+          text: "",
+          imagePath: "./images/keskiaika16.jpg"
+        }
+      },
+      correctAnswer: "B"
+    },
+    {
+      question: "Valitse oikea vastaus",
+      answers: {
+        A: { 
+          text: "",
+          imagePath: "./images/keskiaika17.jpg"
+        },
+        B: { 
+          text: "",
+          imagePath: "./images/keskiaika27.jpg"
+        },
+        C: { 
+          text: "(Notre Damen katedraali)",
+          imagePath: "./images/keskiaika5.jpg"
+        }
+      },
+      correctAnswer: "C"
+    },
+    {
+      question: "Valitse oikea vastaus",
+      answers: {
+        A: { 
+          text: "",
+          imagePath: "./images/keskiaika8.jpg"
+        },
+        B: { 
+          text: "",
+          imagePath: "./images/keskaika18.jpg"
+        },
+        C: { 
+          text: "",
+          imagePath: "./images/keskiaika28.jpg"
+        }
+      },
+      correctAnswer: "A"
+    },
+    {
+      question: "Valitse oikea vastaus",
+      answers: {
+        A: { 
+          text: "",
+          imagePath: "./images/keskiaika19.jpg"
+        },
+        B: { 
+          text: "",
+          imagePath: "./images/keskiaika9.jpg"
+        },
+        C: { 
+          text: "",
+          imagePath: "./images/keskiaika29.jpg"
+        }
+      },
+      correctAnswer: "B"
+    },
+    {
+      question: "Valitse oikea vastaus",
+      answers: {
+        A: { 
+          text: "",
+          imagePath: "./images/keskiaika30.jpg"
+        },
+        B: { 
+          text: "",
+          imagePath: "./images/keskiaika10.jpg"
+        },
+        C: { 
+          text: "",
+          imagePath: "./images/keskiaika20.jpg"
+        }
+      },
+      correctAnswer: "B"
+    },
   ];
+
+  const finalSlide = document.getElementById('final-slide');
 
   buildQuiz();
 
@@ -78,8 +206,9 @@
       const answers = Object.entries(currentQuestion.answers).map(([letter, answer]) => `
         <label>
           <input type="radio" name="question${questionNumber}" value="${letter}">
-          <img src="${answer.imagePath}" alt="${answer.text}" style="max-width: 100%; max-height: 100px;">
-          ${letter} : ${answer.text}
+          <span>${letter} : ${answer.text}</span>
+          <img src="${answer.imagePath}" alt="${answer.text}" style="max-width: 100%; max-height: 200px;">
+          
         </label>
       `).join("");
   
@@ -91,9 +220,9 @@
       `;
     });
   
+    output.push(finalSlide.outerHTML);
     quizContainer.innerHTML = output.join('');
-  } 
- 
+  }
 
   function showResults(){
     const answerContainers = quizContainer.querySelectorAll('.answers');
@@ -102,11 +231,19 @@
     myQuestions.forEach((currentQuestion, questionNumber) => {
       const answerContainer = answerContainers[questionNumber];
       const selector = `input[name=question${questionNumber}]:checked`;
-      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+      const answerOptions = answerContainer.querySelectorAll(selector);
 
-      if(userAnswer === currentQuestion.correctAnswer){
+      answerOptions.forEach(option => {
+      const optionValue = option.value;
+
+      if (optionValue === currentQuestion.correctAnswer) {
+        option.parentNode.style.color = 'lightgreen';
         numCorrect++;
-      }
+      } else {
+        option.parentNode.style.color = 'red'; 
+        }
+
+      });
     });
 
     resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;

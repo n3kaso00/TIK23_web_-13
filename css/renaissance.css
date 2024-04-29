@@ -1,0 +1,173 @@
+h1 {
+    margin: 0px;
+ }
+
+ #header {
+    text-align: center;
+    background-color: #3a2618;
+    margin-bottom: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #f0ead2;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar {
+    background-color: #3a2618;
+    margin-top: 0px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    color: #f0ead2;
+}
+
+.navbar a:hover {
+    color: #f0ead2;
+}
+
+@keyframes shadow {
+    to {
+        box-shadow: 0 0 20px rgb(221, 229, 182)
+    }
+}
+
+li:hover {
+    animation-name: shadow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+
+img:hover {
+    animation-name: hovershadow;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+
+section {
+    padding: 20px;
+}
+
+.footer {
+    background-color: #3a2618;
+    text-align: center;
+    padding: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 3.5rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    margin-top: 50px;
+}
+
+.footer-content h4 {
+    color: #f0ead2;
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.footer-content li {
+    margin-bottom: 15px;
+    display: block;
+}
+
+.footer-content li a {
+    color: #f0ead2;
+}
+
+.footer-content p {
+    color: #f0ead2;
+}
+
+body {
+    background-color: #f0ead2;
+}
+
+.app {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto 20px;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.app h1 {
+    font-size: 25px;
+    color: 001e4d;
+    font-weight: 600px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+
+.quiz {
+    padding: 20px 0;
+}
+
+.quiz h2 {
+    font-size: 18px;
+    color:#3a2618;
+    font-weight: 600;
+}
+
+.btn {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover:not([disabled]) {
+    background: #3a2618;
+    color: #fff;
+}
+
+.btn:disabled {
+    cursor: no-drop;
+}
+
+#next-btn {
+    background: #3a2618;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.btn.correct {
+    background: #9aeabc;
+}
+
+.btn.incorrect {
+    background: #ff9393;
+}
+
+@keyframes hovershadow {
+    to {
+        box-shadow: 0 0 20px rgb(87, 41, 21);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    img {
+        max-width: 350px;
+    }
+}

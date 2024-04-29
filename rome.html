@@ -43,57 +43,57 @@
 
             <div class="drag" id="drag">
                 <div class="dragBox">
-                    <div class="images" draggable="true" ondragstart="drag(event)" id="block1"
+                    <div class="images" draggable="true" ondragstart="drag(event)" id="block1" data-piece="1"
                     style="background-image: url('./images/rome1.jpg');"></div>
                 </div>
                 <div class="dragBox">
-                    <div class="images" draggable="true" ondragstart="drag(event)" id="block2"
+                    <div class="images" draggable="true" ondragstart="drag(event)" id="block2" data-piece="2"
                     style="background-image: url('./images/rome2.jpg');"></div>
                 </div>
                 <div class="dragBox">
-                    <div class="images" draggable="true" ondragstart="drag(event)" id="block3"
+                    <div class="images" draggable="true" ondragstart="drag(event)" id="block3" data-piece="3"
                     style="background-image: url('./images/rome3.jpg');"></div>
                 </div>
                 <div class="dragBox">
-                    <div class="images" draggable="true" ondragstart="drag(event)" id="block4"
+                    <div class="images" draggable="true" ondragstart="drag(event)" id="block4" data-piece="4"
                     style="background-image: url('./images/rome4.jpg');"></div>
                 </div>
                 <div class="dragBox">
-                    <div class="images" draggable="true" ondragstart="drag(event)" id="block5"
+                    <div class="images" draggable="true" ondragstart="drag(event)" id="block5" data-piece="5"
                     style="background-image: url('./images/rome5.jpg');"></div>
                 </div>
                 <div class="dragBox">
-                    <div class="images" draggable="true" ondragstart="drag(event)" id="block6"
+                    <div class="images" draggable="true" ondragstart="drag(event)" id="block6" data-piece="6"
                     style="background-image: url('./images/rome6.jpg');"></div>
                 </div>
                 <div class="dragBox">
-                    <div class="images" draggable="true" ondragstart="drag(event)" id="block7"
+                    <div class="images" draggable="true" ondragstart="drag(event)" id="block7" data-piece="7"
                     style="background-image: url('./images/rome7.jpg');"></div>
                 </div>
                 <div class="dragBox">
-                    <div class="images" draggable="true" ondragstart="drag(event)" id="block8"
+                    <div class="images" draggable="true" ondragstart="drag(event)" id="block8" data-piece="8"
                     style="background-image: url('./images/rome8.jpg');"></div>
                 </div>
                 <div class="dragBox">
-                    <div class="images" draggable="true" ondragstart="drag(event)"  id="block9"
+                    <div class="images" draggable="true" ondragstart="drag(event)"  id="block9" data-piece="9"
                     style="background-image: url('./images/rome9.jpg');"></div>
                 </div>
             </div>
             <div class="board">
-                <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="dropBox correctDrop" data-box="block1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="dropBox correctDrop" data-box="block2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="dropBox correctDrop" data-box="block3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="dropBox correctDrop" data-box="block4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="dropBox correctDrop" data-box="block5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="dropBox correctDrop" data-box="block6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="dropBox correctDrop" data-box="block7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="dropBox correctDrop" data-box="block8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="dropBox correctDrop" data-box="block9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
             </div>
             <button class="reset">Sekoita</button>
-            <button class="score">Laske pisteet</button>
+            <button class="scorebutton" onclick="calculateScore()">Laske pisteet</button>
         </div>
-        <div id="scorecount">Pisteet: 0</div>
+        <div id="score">Pisteet: </div>
 
         <section class="footer">
             <div class="footer-content">
