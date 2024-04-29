@@ -8,6 +8,7 @@ var points = 0;
 
 
 
+
 for ( var i = 0; i< words.length; i++){
 
     let box = document.createElement('div')
@@ -16,9 +17,11 @@ for ( var i = 0; i< words.length; i++){
 
     box.onclick = function() {
 
-        
+        tries++;
+        updateTries();
 
         this.classList.add('boxOpen')
+        
         setTimeout(function(){
             if(document.querySelectorAll('.boxOpen').length > 1){
                 
@@ -33,13 +36,10 @@ for ( var i = 0; i< words.length; i++){
                     document.querySelectorAll('.boxOpen')[0].classList.remove('boxOpen')
 
                     if(document.querySelectorAll('.boxMatch').length == words.length){
-                        alert('Voitit!')
+                        alert('Voitit pelin! Pisteesi: ' + points + ' Yritykset: ' + tries)
                     }
                     
                 } else {
-
-                    tries++;
-                    updateTries();
 
                     document.querySelectorAll('.boxOpen')[1].classList.remove('boxOpen')
                     document.querySelectorAll('.boxOpen')[0].classList.remove('boxOpen')
@@ -49,7 +49,7 @@ for ( var i = 0; i< words.length; i++){
     }
 
     function updateTries() {
-        document.getElementById('triesDisplay').innerHTML = 'Yritykset: ' + tries;
+        document.getElementById('triesDisplay').innerText = 'Yritykset: ' + tries;
     }
 
     function updatePoints() {
