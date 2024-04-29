@@ -31,12 +31,12 @@ document.addEventListener('DOMContentLoaded', function() {
 function calculateScore() {
     let score = 0;
 
-    const dragBoxes = document.querySelectorAll('.dragBox .images');
+    const pieces = document.querySelectorAll('.images');
 
-    dragBoxes.forEach(dragBox => {
-        const pieceId = dragBox.id;
+    pieces.forEach(piece => {
+        const pieceId = piece.id;
         const dropBox = document.querySelector(`.dropBox[data-box="${pieceId}"]`);
-        if (dropBox && dropBox.classList.contains('correctDrop')) {
+        if( piece.parentElement.getAttribute('data-box') === pieceId) {
             score++;
         }
     });
