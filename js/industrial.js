@@ -3,7 +3,7 @@
 const words = ['Rautatie', 'Rautatie', 'Höyrylaiva', 'Höyrylaiva', 'Kutomakone', 'Kutomakone', 'Tehdas', 'Tehdas', 'Höyrytraktori', 'Höyrytraktori', 'Paperikone', 'Paperikone', 'Lennätin', 'Lennätin', 'Höyrykone', 'Höyrykone']
 
 
-// S
+// Shuffle the words randomly
 var shuf_words = words.sort(() => (Math.random() > .5) ? 2 : -1);
 
 var gameContainer = document.querySelector('.game');
