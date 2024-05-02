@@ -50,5 +50,6 @@ function calculateScore() {
 
     localStorage.setItem(maxScoreKey2, rome_points)
 }
-/*pisteenlaku päättyy*/
+
+/*pisteenlasku päättyy*/
 
