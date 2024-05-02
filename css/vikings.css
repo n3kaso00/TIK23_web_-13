@@ -29,6 +29,7 @@ a {
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
+
 #maincontent {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
