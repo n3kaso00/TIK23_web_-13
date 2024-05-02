@@ -137,7 +137,7 @@
         background: var(--img);
         background-size: cover;
     }
-/* muokkaa reset button sopivaksi*/
+
     .reset {
         padding: 15px 25px;
         border: none;
