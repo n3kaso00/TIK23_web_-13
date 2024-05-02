@@ -1,12 +1,22 @@
 
-const maxScoreKey = 'vikingQuizMaxPoints';
+let vikingPoints = 0;
+let romePoints = 0;
 
+displayVikingPoints()
+displayRomeMaxPoints()
 
-function displayMaxPoints() {
-    const maxPoints = parseInt(localStorage.getItem(maxScoreKey)) || 0;
+/*pistehaku*/
+
+function displayVikingPoints() {
+    vikingPoints = parseInt(localStorage.getItem('vikingQuizMaxPoints')) || 0;
     const vikingScoreTable = document.getElementById('viking_score');
-    vikingScoreTable.innerText = maxPoints;
+    vikingScoreTable.innerText = vikingPoints;
 }
 
+function displayRomeMaxPoints() {
+    romePoints = parseInt(localStorage.getItem('rome_points')) || 0;
+    const romeScoreTable = document.getElementById('rome_score');
+    romeScoreTable.innerText = romePoints;
+}
+/*pistehaku päättyy*/
 
-window.onload = displayMaxPoints;
