@@ -87,14 +87,28 @@ const questions = [
 
   ];
   
+ 
+
 let currentQuestion = 0;
 let points = 0;
 
-/*Displays pre-defined media to elements on loading the page, and defines index
- number to each radiobutton*/
 
-  function showQuestion() {
+function initializeQuiz() {
+    currentQuestion = 0;
+    points = 0;
 
+    
+    document.getElementById('feedbackbox').innerHTML = '';
+    const tryAgainButton = document.getElementById('try-again');
+    if (tryAgainButton) {
+        tryAgainButton.remove();
+    }
+
+    showQuestion();
+}
+
+
+function showQuestion() {
     const triviaText = document.getElementById("triviabox");
     triviaText.textContent = questions[currentQuestion].trivia;
 
@@ -108,46 +122,57 @@ let points = 0;
     const choiceLabels = document.querySelectorAll(".choice-label");
 
     choices.forEach((choice, index) => {
-      choiceLabels[index].textContent = questions[currentQuestion].choices[index];
+        choiceLabels[index].textContent = questions[currentQuestion].choices[index];
     });
-
 }
-showQuestion();
 
-/*Adds submit functionality to function answer*/
 
 document.getElementById('answerform').addEventListener('submit', answer);
 
-/* Defines function answer, prevents default page refresh from button, makes data acquirable from form,
-checks if answer is correct, gives points for correct answer and sets pre-defined feedback to be displayed
-if the answer is correct/wrong, also displays next question with 10 sec delay*/
 
-function answer(e){
+function answer(e) {
     e.preventDefault();
-
 
     let formdata = new FormData(e.currentTarget);
 
-    if( formdata.get('selection') ==  questions[currentQuestion].answer ){
+    if (formdata.get('selection') == questions[currentQuestion].answer) {
         points++;
         const correctAnswer = document.getElementById("feedbackbox");
         correctAnswer.textContent = questions[currentQuestion].feedback;
-        console.log("Points: ", points);
-}
-
-    else {
-      const wrongAnswer = document.getElementById("feedbackbox");
-      wrongAnswer.textContent = "Vastauksesi oli väärin";
+    } else {
+        const wrongAnswer = document.getElementById("feedbackbox");
+        wrongAnswer.textContent = "Vastauksesi oli väärin";
     }
-setTimeout(nextQuestion, 10000);
+    setTimeout(nextQuestion, 1000);
+}
+
+// Function to handle the next question or show the final score
+function nextQuestion() {
+    if (currentQuestion < questions.length - 1) {
+        currentQuestion++;
+        showQuestion();
+    } else {
+        showFinalScore();
+    }
 }
 
 
-/*nextQuestion checks if there are any questions left in the pool and displays next Q*/
+const maxScoreKey = 'vikingQuizMaxPoints';
 
-function nextQuestion ()  {
-    if (currentQuestion <= questions.length)
-      {currentQuestion++}
-      showQuestion();   
+function showFinalScore() {
+    const feedbackbox = document.getElementById('feedbackbox');
+    feedbackbox.textContent = `Sait ${points} pistettä kymmenestä. Haluatko yrittää uudelleen?`;
+    const maxPoints = parseInt(localStorage.getItem(maxScoreKey)) || 0;
+
+    
+    if (points > maxPoints) {
+        localStorage.setItem(maxScoreKey, points);
+    }
+    const tryAgainButton = document.createElement('button');
+    tryAgainButton.id = 'try-again';
+    tryAgainButton.innerText = "Yritä uudelleen";
+    tryAgainButton.onclick = initializeQuiz;
+    document.getElementById('answerbox').appendChild(tryAgainButton);
 }
-   
+
+initializeQuiz();
