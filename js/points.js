@@ -36,6 +36,7 @@ function displayMiddleagePoints() {
     const middleageScoreTable = document.getElementById('middleage_score');
     middleageScoreTable.innerText = middleagePoints;
 }
+<<<<<<< HEAD
 
 function displayTotalPoints() {
     const totalPoints = vikingPoints + romePoints + industrialPoints + middleagePoints || 0;
@@ -43,4 +44,7 @@ function displayTotalPoints() {
     totalScoreTable.innerText = totalPoints;
 }
 /*pistehaku päättyy*/
+=======
+>>>>>>> e6d6c8d1ca78b526b6b85a12cee3f68d05034db9
 
+/*pistehaku päättyy*/
