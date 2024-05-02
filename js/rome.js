@@ -1,3 +1,4 @@
+/*Kuvien raahaaminen ja pudottaminen*/
 function drag(event){
     event.dataTransfer.setData("text", event.target.id);
 }
@@ -11,6 +12,7 @@ function drop(event){
     let data = event.dataTransfer.getData("text");
     event.target.appendChild(document.getElementById(data));
 }
+/*päättyy*/
 
 document.addEventListener('DOMContentLoaded', function() {
     let parent = document.getElementById('drag');
@@ -29,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
 /*pisteenlasku*/
 
 function calculateScore() {
-    let score = 0;
+    let rome_points = 0;
 
     const pieces = document.querySelectorAll('.images');
 
@@ -37,10 +39,11 @@ function calculateScore() {
         const pieceId = piece.id;
         const dropBox = document.querySelector(`.dropBox[data-box="${pieceId}"]`);
         if( piece.parentElement.getAttribute('data-box') === pieceId) {
-            score++;
+            rome_points++;
         }
     });
 
-    const scoreDisplay = document.getElementById('score');
-    scoreDisplay.textContent = `Pisteet: ${score}`;
+    const scoreDisplay = document.getElementById('rome_points');
+    scoreDisplay.textContent = `Pisteet: ${rome_points}`;
 }
+/*pisteenlaku päättyy*/
