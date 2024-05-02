@@ -46,7 +46,7 @@ function calculateScore() {
     });
 
     const scoreDisplay = document.getElementById('rome_points');
-    scoreDisplay.textContent = `Pisteet: ${rome_points}`;
+    scoreDisplay.textContent = `Pisteet:${rome_points}`;
 
     localStorage.setItem(maxScoreKey2, rome_points)
 }
