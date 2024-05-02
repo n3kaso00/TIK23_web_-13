@@ -43,8 +43,12 @@ for ( var i = 0; i< words.length; i++){
                     document.querySelectorAll('.boxOpen')[0].classList.add('boxMatch');
                     document.querySelectorAll('.boxOpen')[1].classList.add('boxMatch');
 
+                    const maxScoreKey2 = 'industrial_points';
+
                     industrial_points++,
                     updatePoints();
+
+                    localStorage.setItem(maxScoreKey2, industrial_points)
 
                     // Remove the 'boxOpen' class from matched words
                     document.querySelectorAll('.boxOpen')[1].classList.remove('boxOpen')
@@ -64,6 +68,7 @@ for ( var i = 0; i< words.length; i++){
             }
         },500)
     }
+
 
     // Function to update the display of tries
     function updateTries() {
