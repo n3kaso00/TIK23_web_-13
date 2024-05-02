@@ -57,33 +57,28 @@ section{
     padding: 20px;
 }
 
-.footer{
+.footer {
     background-color: #3a2618;
     text-align: center;
     padding: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-    gap: 3.5rem;
-    left: 0;
-    right: 0;
-    bottom: 0;
 }
 
-.footer-content h4{
+.footer .footer-content {
     color: #f0ead2;
     font-size: 20px;
     margin-bottom: 1rem;
 }
 
-.footer-content li{
+.footer .footer-content li {
     margin-bottom: 15px;
     display: block;
 }
 
-.footer-content li a{
+.footer .footer-content li a {
     color: #f0ead2;
 }
 
-.footer-content p{
+.footer .footer-content p {
     color: #f0ead2;
 }
 
