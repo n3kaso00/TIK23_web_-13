@@ -4,7 +4,7 @@ var shuf_words = words.sort(() => (Math.random() > .5) ? 2 : -1);
 
 var gameContainer = document.querySelector('.game');
 var tries = 0;
-var points = 0;
+var industrial_points = 0;
 
 
 
@@ -29,7 +29,7 @@ for ( var i = 0; i< words.length; i++){
                     document.querySelectorAll('.boxOpen')[0].classList.add('boxMatch');
                     document.querySelectorAll('.boxOpen')[1].classList.add('boxMatch');
 
-                    points++,
+                    industrial_points++,
                     updatePoints();
 
                     document.querySelectorAll('.boxOpen')[1].classList.remove('boxOpen')
@@ -53,7 +53,7 @@ for ( var i = 0; i< words.length; i++){
     }
 
     function updatePoints() {
-        document.getElementById('pointsDisplay').innerHTML = 'Pisteesi: ' + points;
+        document.getElementById('pointsDisplay').innerHTML = 'Pisteesi: ' + industrial_points;
     }
 
     document.querySelector('.game').appendChild(box);
