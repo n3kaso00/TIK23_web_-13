@@ -130,7 +130,7 @@ img:hover {
 /* responsiivisuus ei ole vielä lähelläkään valmis :DD */
 
 @media only screen and (max-width: 600px) {
-    img {
+    img:not(#timeline){
         max-width: 350px;
     }
 }
