@@ -35,4 +35,3 @@ function displayMiddleagePoints() {
 }
 
 /*pistehaku päättyy*/
-
