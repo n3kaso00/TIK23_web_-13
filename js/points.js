@@ -9,6 +9,7 @@ displayVikingPoints()
 displayRomeMaxPoints()
 displayIndustrialPoints()
 displayMiddleagePoints()
+displayTotalPoints()
 
 
 function displayVikingPoints() {
@@ -29,15 +30,17 @@ function displayIndustrialPoints() {
     industrialScoreTable.innerText = industrialPoints;
 }
 
-<<<<<<< HEAD
 
-=======
 function displayMiddleagePoints() {
     middleagePoints = parseInt(localStorage.getItem('middleage_points')) || 0;
     const middleageScoreTable = document.getElementById('middleage_score');
     middleageScoreTable.innerText = middleagePoints;
 }
->>>>>>> 5114ba13a095571f8f4e42b6d23f8be2882ce0fb
 
+function displayTotalPoints() {
+    const totalPoints = vikingPoints + romePoints + industrialPoints + middleagePoints || 0;
+    const totalScoreTable = document.getElementById('total_score');
+    totalScoreTable.innerText = totalPoints;
+}
 /*pistehaku päättyy*/
 
