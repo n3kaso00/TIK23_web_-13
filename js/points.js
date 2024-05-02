@@ -9,6 +9,7 @@ displayVikingPoints()
 displayRomeMaxPoints()
 displayIndustrialPoints()
 displayMiddleagePoints()
+displayTotalPoints()
 
 
 function displayVikingPoints() {
@@ -28,6 +29,7 @@ function displayIndustrialPoints() {
     const industrialScoreTable = document.getElementById('industrial_score');
     industrialScoreTable.innerText = industrialPoints;
 }
+
 
 function displayMiddleagePoints() {
     middleagePoints = parseInt(localStorage.getItem('middleage_points')) || 0;
