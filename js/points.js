@@ -3,6 +3,7 @@ let vikingPoints = 0;
 let romePoints = 0;
 let industrialPoints = 0;
 
+
 displayVikingPoints()
 displayRomeMaxPoints()
 displayIndustrialPoints()
@@ -25,6 +26,8 @@ function displayIndustrialPoints() {
     const industrialScoreTable = document.getElementById('industrial_score');
     industrialScoreTable.innerText = industrialPoints;
 }
+
+
 
 /*pistehaku päättyy*/
 
