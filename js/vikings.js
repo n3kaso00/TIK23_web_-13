@@ -1,3 +1,4 @@
+/* questions for trivia*/
 
 const questions = [
 
@@ -88,10 +89,12 @@ const questions = [
   ];
   
  
+/*define variables which we are using in quiz*/
 
 let currentQuestion = 0;
 let points = 0;
 
+/*first, we reset variables and remove try-again button if user has already started new game*/
 
 function initializeQuiz() {
     currentQuestion = 0;
@@ -107,6 +110,7 @@ function initializeQuiz() {
     showQuestion();
 }
 
+/* Displays content on screen, including trivia, images, and feedback after a right or wrong answer*/
 
 function showQuestion() {
     const triviaText = document.getElementById("triviabox");
@@ -121,19 +125,23 @@ function showQuestion() {
     const choices = document.querySelectorAll(".choice");
     const choiceLabels = document.querySelectorAll(".choice-label");
 
+    document.getElementById('answer').disabled = false;
+
     choices.forEach((choice, index) => {
         choiceLabels[index].textContent = questions[currentQuestion].choices[index];
     });
 }
 
+/*form submit handler*/
 
 document.getElementById('answerform').addEventListener('submit', answer);
 
-
+/* checks if radiobutton value is the same as in answer-array, adds points and displays feedback*/
 function answer(e) {
     e.preventDefault();
 
     let formdata = new FormData(e.currentTarget);
+    document.getElementById('answer').disabled = true;
 
     if (formdata.get('selection') == questions[currentQuestion].answer) {
         points++;
@@ -143,10 +151,11 @@ function answer(e) {
         const wrongAnswer = document.getElementById("feedbackbox");
         wrongAnswer.textContent = "Vastauksesi oli väärin";
     }
-    setTimeout(nextQuestion, 1000);
+    setTimeout(nextQuestion, 10000);
 }
 
-// Function to handle the next question or show the final score
+/* shows next question in array or displays final scores*/
+
 function nextQuestion() {
     if (currentQuestion < questions.length - 1) {
         currentQuestion++;
@@ -159,20 +168,32 @@ function nextQuestion() {
 
 const maxScoreKey = 'vikingQuizMaxPoints';
 
+/* defines what is showing in the final score screen and stores max score to cache, also displays tryagain-button*/
 function showFinalScore() {
-    const feedbackbox = document.getElementById('feedbackbox');
-    feedbackbox.textContent = `Sait ${points} pistettä kymmenestä. Haluatko yrittää uudelleen?`;
-    const maxPoints = parseInt(localStorage.getItem(maxScoreKey)) || 0;
+  const feedbackbox = document.getElementById('feedbackbox');
+  feedbackbox.textContent = `Sait ${points} pistettä kymmenestä. Haluatko yrittää uudelleen?`;
+  document.getElementById('answer').disabled = true;
 
-    
-    if (points > maxPoints) {
-        localStorage.setItem(maxScoreKey, points);
-    }
-    const tryAgainButton = document.createElement('button');
-    tryAgainButton.id = 'try-again';
-    tryAgainButton.innerText = "Yritä uudelleen";
-    tryAgainButton.onclick = initializeQuiz;
-    document.getElementById('answerbox').appendChild(tryAgainButton);
+
+  const maxPoints = parseInt(localStorage.getItem(maxScoreKey)) || 0;
+
+  
+  if (points > maxPoints) {
+      localStorage.setItem(maxScoreKey, points);
+  }
+
+  
+  const existingButton = document.getElementById('try-again');
+  if (existingButton) {
+      existingButton.remove();
+  }
+
+  
+  const tryAgainButton = document.createElement('button');
+  tryAgainButton.id = 'try-again';
+  tryAgainButton.innerText = "Yritä uudelleen";
+  tryAgainButton.onclick = initializeQuiz;
+  document.getElementById('answerbox').appendChild(tryAgainButton);
 }
 
 initializeQuiz();
