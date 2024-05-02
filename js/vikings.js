@@ -147,11 +147,13 @@ function answer(e) {
         points++;
         const correctAnswer = document.getElementById("feedbackbox");
         correctAnswer.textContent = questions[currentQuestion].feedback;
+        setTimeout(nextQuestion, 8000);
     } else {
         const wrongAnswer = document.getElementById("feedbackbox");
-        wrongAnswer.textContent = "Vastauksesi oli väärin";
+        wrongAnswer.textContent = "Vastauksesi oli väärin! Et saanut kysymyksestä pisteitä.";
+        setTimeout(nextQuestion, 3000);
     }
-    setTimeout(nextQuestion, 10000);
+    
 }
 
 /* shows next question in array or displays final scores*/
