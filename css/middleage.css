@@ -2,9 +2,9 @@
 
 h1 {
     margin: 0px;
- }
+}
 
- #header {
+#header {
     text-align: center;
     background-color: #3a2618;
     margin-bottom: 0px;
@@ -13,15 +13,15 @@ h1 {
 a {
     text-decoration: none;
     color: #f0ead2;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-        /* navbar */
+/* navbar */
 
 .navbar {
     background-color: #3a2618;
     margin-top: 0px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar a {
@@ -33,7 +33,7 @@ a {
 }
 
 .navbar-toggler {
-    background-color: #f0ead2; 
+    background-color: #f0ead2;
 }
 
 @keyframes shadow {
@@ -49,13 +49,13 @@ li:hover {
 }
 
 
-        /* footer */
+/* footer */
 
-section{
+section {
     padding: 20px;
 }
 
-.footer{
+.footer {
     background-color: #3a2618;
     text-align: center;
     padding: 10px;
@@ -66,71 +66,74 @@ section{
     bottom: 0;
 }
 
-.footer-content h4{
+.footer-content h4 {
     color: #f0ead2;
     font-size: 20px;
     margin-bottom: 1rem;
 }
 
-.footer-content li{
+.footer-content li {
     margin-bottom: 15px;
     display: block;
 }
 
-.footer-content li a{
+.footer-content li a {
     color: #f0ead2;
 }
 
-.footer-content p{
+.footer-content p {
     color: #f0ead2;
 }
 
 /* middleage */
 
-body{
-	font-family: Arial, Helvetica, sans-serif;
-	color: #333;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
     font-weight: 300;
     text-align: center;
     background-color: #f0ead2;
 }
 
-.h1{
+.h1 {
     font-weight: 300;
     margin: 0px;
     padding: 10px;
     font-size: 20px;
     color: #3a2618;
 }
-.question{
+
+.question {
     font-size: 30px;
     margin-bottom: 10px;
 }
+
 .answers {
     margin-bottom: 20px;
     text-align: left;
     display: inline-block;
 }
-.answers label{
+
+.answers label {
     display: block;
     margin-bottom: 10px;
 
-} 
-    
-button{
-    font-family: Arial, Helvetica, sans-serif;
-	font-size: 22px;
-	background-color: rgb(66, 164, 110);
-	color: #fff;
-	border: 0px;
-	border-radius: 3px;
-	padding: 20px;
-	cursor: pointer;
-	margin-bottom: 20px;
 }
 
-button:hover{
-	background-color: rgb(48, 153, 102);
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    background-color: rgb(66, 164, 110);
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: rgb(48, 153, 102);
 }
 
 .slide {
@@ -147,13 +150,19 @@ button:hover{
     width: 500px;
 }
 
-.active-slide{
+.active-slide {
     opacity: 1;
     z-index: 2;
 }
 
-.quiz-container{
+.quiz-container {
     position: relative;
-    height: 1000px;
+    height: 900px;
     margin-top: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+    img:not(#timeline) {
+        max-width: 350px;
+    }
 }
