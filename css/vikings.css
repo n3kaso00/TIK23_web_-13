@@ -18,6 +18,9 @@ h1 {
     margin-top: 0px;
     font-family:Arial, Helvetica, sans-serif;
 }
+.navbar-toggler {
+    background-color: #f0ead2; 
+}
 
 .navbar a {
     color: #f0ead2;

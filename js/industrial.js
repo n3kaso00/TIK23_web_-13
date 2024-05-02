@@ -10,8 +10,7 @@ var shuf_words = words.sort(() => (Math.random() > .5) ? 2 : -1);
 // Select the container for the game
 var gameContainer = document.querySelector('.game');
 
-// Initialize variables for tracking tries and points
-var tries = 0;
+// Initialize variables for tracking points
 var industrial_points = 0;
 
 // Loop through each word
@@ -25,9 +24,6 @@ for ( var i = 0; i< words.length; i++){
     // Add click event listener to each word
     box.onclick = function() {
 
-        // Increment the number of tries
-        tries++;
-        updateTries();
 
         // Add a class to visually indicate that the word is clicked
         this.classList.add('boxOpen')
@@ -69,12 +65,6 @@ for ( var i = 0; i< words.length; i++){
         },500)
     }
 
-
-    // Function to update the display of tries
-    function updateTries() {
-        document.getElementById('triesDisplay').innerText = 'Yritykset: ' + tries;
-    }
-
     // Function to update the display of points
     function updatePoints() {
         document.getElementById('pointsDisplay').innerHTML = 'Pisteesi: ' + industrial_points;
@@ -112,7 +102,7 @@ closeBtns.forEach(function(btn){
 
 // Add a click event listener to the window to close modals when clicked outside
 window.onclick = function(e){
-    if(e.target.classList.constains('modal')){
+    if(e.target.classList.contains('modal')){
         e.target.style.display = 'none';
     }
 };

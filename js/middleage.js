@@ -250,7 +250,9 @@
       });
     });
 
+    const maxScoreKey2 = 'middleage_points';
     resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+    localStorage.setItem(maxScoreKey2, middleage_points)
   }
 
   function showSlide(n) {
