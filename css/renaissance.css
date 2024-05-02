@@ -63,7 +63,7 @@ section {
     right: 0;
     bottom: 0;
     position: absolute;
-    margin-top: 50px;
+    margin-top: auto;
 }
 
 .footer-content h4 {
