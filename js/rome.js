@@ -47,3 +47,6 @@ function calculateScore() {
     scoreDisplay.textContent = `Pisteet: ${rome_points}`;
 }
 /*pisteenlaku päättyy*/
+
+/* Tallennetaan pisteet Local Storageen*/
+
