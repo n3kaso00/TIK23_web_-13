@@ -29,14 +29,10 @@ function displayIndustrialPoints() {
     industrialScoreTable.innerText = industrialPoints;
 }
 
-<<<<<<< HEAD
-
-=======
 function displayMiddleagePoints() {
     middleagePoints = parseInt(localStorage.getItem('middleage_points')) || 0;
     const middleageScoreTable = document.getElementById('middleage_score');
     middleageScoreTable.innerText = middleagePoints;
 }
->>>>>>> 5114ba13a095571f8f4e42b6d23f8be2882ce0fb
 
 /*pistehaku päättyy*/
