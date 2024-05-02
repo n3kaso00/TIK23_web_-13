@@ -1,4 +1,8 @@
-
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 #header {
     text-align: center;
@@ -36,7 +40,7 @@ a {
     grid-template-rows: repeat(3, 1fr); 
     background-color: #f0ead2;
     margin: 5px;
-    height: 100%;
+    height: calc(100vh - 114px);
     
 }
 
@@ -89,6 +93,7 @@ a {
     padding: 10px;
     grid-row: 4/5;
     grid-column: 1/5;
+    margin-top: auto;
 }
 
 .footer-content h4{
@@ -109,3 +114,5 @@ a {
 .footer-content p{
     color: #f0ead2;
 }
+
+

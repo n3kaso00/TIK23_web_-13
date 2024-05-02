@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /*pisteenlasku*/
 
+const maxScoreKey2 = 'rome_points';
+
 function calculateScore() {
     let rome_points = 0;
 
@@ -44,9 +46,9 @@ function calculateScore() {
     });
 
     const scoreDisplay = document.getElementById('rome_points');
-    scoreDisplay.textContent = `Pisteet: ${rome_points}`;
+    scoreDisplay.textContent = `Pisteet:${rome_points}`;
+
+    localStorage.setItem(maxScoreKey2, rome_points)
 }
 /*pisteenlaku päättyy*/
-
-/* Tallennetaan pisteet Local Storageen*/
 
