@@ -41,7 +41,7 @@ a {
 
 #timeline img {
     width: 100%;
-    
+    height: auto;
 }
 
 li:hover {
