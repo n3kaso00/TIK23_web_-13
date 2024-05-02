@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
+/*pisteenlasku*/
 
 function calculateScore() {
     let score = 0;
