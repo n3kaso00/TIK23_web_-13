@@ -54,8 +54,6 @@ function displayRenaissancePoints() {
     renaissanceScoreTable.innerText = renaissancePoints; 
 }
 
-/*yhteispisteet*/
-
 function displayTotalPoints() {
     const totalPoints = vikingPoints + romePoints + industrialPoints + middleagePoints + egyptPoints || 0;
     const totalScoreTable = document.getElementById('total_score');
