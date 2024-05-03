@@ -39,10 +39,6 @@ function displayMiddleagePoints() {
     middleageScoreTable.innerText = middleagePoints;
 }
 
-function displayEgyptPoints() {
-    egyptPoints = parseInt(localStorage.getItem('egypt_points')) || 0;
-    const egyptScoreTable = document.getElementById('egypt_score');
-    egyptScoreTable.innerText = egyptPoints;
-}
+
 
 /*pistehaku päättyy*/
