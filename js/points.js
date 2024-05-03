@@ -39,8 +39,14 @@ function displayMiddleagePoints() {
     middleageScoreTable.innerText = middleagePoints;
 }
 
+function displayEgyptPoints() {
+    egyptPoints = parseInt(localStorage.getItem('egypt_points')) || 0;
+    const egyptScoreTable = document.getElementById('egypt_points');
+    egyptScoreTable.innerText = egyptPoints;
+}
+
 function displayTotalPoints() {
-    const totalPoints = vikingPoints + romePoints + industrialPoints + middleagePoints || 0;
+    const totalPoints = vikingPoints + romePoints + industrialPoints + middleagePoints + egyptPoints || 0;
     const totalScoreTable = document.getElementById('total_score');
     totalScoreTable.innerText = totalPoints;
 }
