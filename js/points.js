@@ -3,11 +3,8 @@ let vikingPoints = 0;
 let romePoints = 0;
 let industrialPoints = 0;
 let middleagePoints = 0;
-<<<<<<< HEAD
 let totalPoints = 0;
-=======
 let egyptPoints = 0;
->>>>>>> a000de79dd286d8a409bb54b97f2f41efe92c872
 let renaissancePoints = 0;
 
 
@@ -21,7 +18,7 @@ displayTotalPoints()
 
 
 function displayVikingPoints() {
-    vikingPoints = parseInt(localStorage.getItem('vikingQuizMaxPoints')) || 0;
+    vikingPoints = parseInt(localStorage.getItem('viking_points')) || 0;
     const vikingScoreTable = document.getElementById('viking_score');
     vikingScoreTable.innerText = vikingPoints;
 }
