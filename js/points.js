@@ -4,6 +4,7 @@ let romePoints = 0;
 let industrialPoints = 0;
 let middleagePoints = 0;
 let totalPoints = 0;
+let renaissancePoints = 0;
 
 
 displayVikingPoints()
