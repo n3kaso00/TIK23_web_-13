@@ -44,7 +44,7 @@ function displayMiddleagePoints() {
 
 function displayEgyptPoints() {
     egyptPoints = parseInt(localStorage.getItem('egypt_points')) || 0;
-    const egyptScoreTable = document.getElementById('egypt_points');
+    const egyptScoreTable = document.getElementById('egypt_score');
     egyptScoreTable.innerText = egyptPoints;
 }
 
