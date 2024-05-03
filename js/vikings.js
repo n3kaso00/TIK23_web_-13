@@ -195,7 +195,7 @@ function showFinalScore() {
   tryAgainButton.id = 'try-again';
   tryAgainButton.innerText = "Yritä uudelleen";
   tryAgainButton.onclick = initializeQuiz;
-  document.getElementById('answerbox').appendChild(tryAgainButton);
+  document.getElementById('feedbackbox').appendChild(tryAgainButton);
 }
 
 initializeQuiz();
