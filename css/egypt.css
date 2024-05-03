@@ -83,10 +83,13 @@ li:hover {
     top: 50%;
     left: 50%; 
     transform: translate(-50%, -50%);
+    width: 500px;
+}
 
+#quizcontent {
+    text-align: center;
+}
 
-  }
-  
   h2 {
     text-align: center;
     color: #3a2618;
@@ -95,12 +98,29 @@ li:hover {
   #question {
     margin-bottom: 20px;
     text-align: center;
+    margin-top: 35px;
+    font-size: large;
+    position: absolute;
+    top: 0;
+    left: 50%; /* Asettaa boksin vaakasuunnassa keskelle */
+    transform: translateX(-50%);
   }
   
   #options {
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #count {
+    margin-top: 20px;
+  }
+
+  #result {
+    text-align: center;
   }
   
   button {
@@ -126,13 +146,12 @@ section{
     background-color: #3a2618;
     text-align: center;
     padding: 10px;
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     gap: 3.5rem;
+    position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-   
 }
 
 .footer-content h4{

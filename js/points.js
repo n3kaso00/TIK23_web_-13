@@ -9,6 +9,7 @@ displayVikingPoints()
 displayRomeMaxPoints()
 displayIndustrialPoints()
 displayMiddleagePoints()
+displayTotalPoints()
 
 
 function displayVikingPoints() {
