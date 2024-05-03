@@ -4,6 +4,7 @@ let romePoints = 0;
 let industrialPoints = 0;
 let middleagePoints = 0;
 let egyptPoints = 0;
+let renaissancePoints = 0;
 
 
 displayVikingPoints()
@@ -40,16 +41,11 @@ function displayMiddleagePoints() {
     middleageScoreTable.innerText = middleagePoints;
 }
 
+
 function displayEgyptPoints() {
     egyptPoints = parseInt(localStorage.getItem('egypt_points')) || 0;
     const egyptScoreTable = document.getElementById('egypt_points');
     egyptScoreTable.innerText = egyptPoints;
-}
-
-function displayTotalPoints() {
-    const totalPoints = vikingPoints + romePoints + industrialPoints + middleagePoints + egyptPoints || 0;
-    const totalScoreTable = document.getElementById('total_score');
-    totalScoreTable.innerText = totalPoints;
 }
 
 function displayRenaissancePoints() {
@@ -57,7 +53,16 @@ function displayRenaissancePoints() {
     const renaissanceScoreTable = document.getElementById('renaissance_score'); 
     renaissanceScoreTable.innerText = renaissancePoints; 
 }
-/*pistehaku päättyy*/
+
+/*yhteispisteet*/
+
+function displayTotalPoints() {
+    const totalPoints = vikingPoints + romePoints + industrialPoints + middleagePoints + egyptPoints || 0;
+    const totalScoreTable = document.getElementById('total_score');
+    totalScoreTable.innerText = totalPoints;
+}
+
+/*yhteispisteet päättyy*/
 
 
 /*pistehaku päättyy*/

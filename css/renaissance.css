@@ -61,7 +61,7 @@ section {
 .footer {
     background-color: #3a2618;
     text-align: center;
-    padding: 50px;
+    padding: 10px;
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     gap: 3.5rem;
     left: 0;
