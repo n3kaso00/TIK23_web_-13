@@ -50,7 +50,5 @@ function displayTotalPoints() {
     const totalScoreTable = document.getElementById('total_score');
     totalScoreTable.innerText = totalPoints;
 }
-/*pistehaku päättyy*/
-
 
 /*pistehaku päättyy*/
