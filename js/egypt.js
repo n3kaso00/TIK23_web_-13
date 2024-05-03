@@ -118,14 +118,19 @@ const quizData = [
       showResult();
     }
   }
-  // lopputekstit..
+  // lopputekstit ja pisteenlasku
+
+  const maxScoreKey2 = 'egypt_points'
 
   function showResult() {
     clearInterval(interval);
     points.textContent =`${score}/${quizData.length}`;
     quizContent.classList.add('hidden');
     result.classList.remove('hidden');
+    localStorage.setItem(maxScoreKey2, egypt_points);
   }
+
+
   
 
     
