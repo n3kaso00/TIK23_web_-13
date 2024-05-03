@@ -70,6 +70,7 @@ a {
             flex-direction: column;
             gap: 30px;
             background: #f0ead2;
+            color: #3a2618;
             padding: 40px 60px;
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
