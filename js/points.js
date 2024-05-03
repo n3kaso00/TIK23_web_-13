@@ -3,12 +3,14 @@ let vikingPoints = 0;
 let romePoints = 0;
 let industrialPoints = 0;
 let middleagePoints = 0;
+let egyptPoints = 0;
 
 
 displayVikingPoints()
 displayRomeMaxPoints()
 displayIndustrialPoints()
 displayMiddleagePoints()
+displayEgyptPoints()
 displayTotalPoints()
 
 
@@ -35,6 +37,12 @@ function displayMiddleagePoints() {
     middleagePoints = parseInt(localStorage.getItem('middleage_points')) || 0;
     const middleageScoreTable = document.getElementById('middleage_score');
     middleageScoreTable.innerText = middleagePoints;
+}
+
+function displayEgyptPoints() {
+    egyptPoints = parseInt(localStorage.getItem('egypt_points')) || 0;
+    const egyptScoreTable = document.getElementById('egypt_score');
+    egyptScoreTable.innerText = egyptPoints;
 }
 
 /*pistehaku päättyy*/
