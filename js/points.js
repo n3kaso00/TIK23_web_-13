@@ -46,6 +46,12 @@ function displayEgyptPoints() {
     egyptScoreTable.innerText = egyptPoints;
 }
 
+function displayRenaissancePoints() {
+    renaissancePoints = parseInt(localStorage.getItem('renaissance_points')) || 0; 
+    const renaissanceScoreTable = document.getElementById('renaissance_score'); 
+    renaissanceScoreTable.innerText = renaissancePoints; 
+}
+
 /*yhteispisteet*/
 
 function displayTotalPoints() {
@@ -55,12 +61,6 @@ function displayTotalPoints() {
 }
 
 /*yhteispisteet päättyy*/
-function displayRenaissancePoints() {
-    renaissancePoints = parseInt(localStorage.getItem('renaissance_points')) || 0; 
-    const renaissanceScoreTable = document.getElementById('renaissance_score'); 
-    renaissanceScoreTable.innerText = renaissancePoints; 
-}
-/*pistehaku päättyy*/
 
 
 /*pistehaku päättyy*/
