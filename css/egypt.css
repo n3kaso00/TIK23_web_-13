@@ -146,13 +146,12 @@ section{
     background-color: #3a2618;
     text-align: center;
     padding: 10px;
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     gap: 3.5rem;
+    position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-   
 }
 
 .footer-content h4{
