@@ -150,6 +150,21 @@ button:hover {
     width: 500px;
 }
 
+.final-slide {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border: 15px solid #3a2618;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.final-slide.active-slide {
+    opacity: 1;
+}
+
 .active-slide {
     opacity: 1;
     z-index: 2;
@@ -160,6 +175,8 @@ button:hover {
     height: 900px;
     margin-top: 40px;
 }
+
+/* responsiivisuus */
 
 @media only screen and (max-width: 600px) {
     img:not(#timeline) {

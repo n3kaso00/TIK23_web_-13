@@ -30,7 +30,6 @@ function displayIndustrialPoints() {
     industrialScoreTable.innerText = industrialPoints;
 }
 
-
 function displayMiddleagePoints() {
     middleagePoints = parseInt(localStorage.getItem('middleage_points')) || 0;
     const middleageScoreTable = document.getElementById('middleage_score');
