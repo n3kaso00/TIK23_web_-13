@@ -3,7 +3,11 @@ let vikingPoints = 0;
 let romePoints = 0;
 let industrialPoints = 0;
 let middleagePoints = 0;
+<<<<<<< HEAD
 let totalPoints = 0;
+=======
+let egyptPoints = 0;
+>>>>>>> a000de79dd286d8a409bb54b97f2f41efe92c872
 let renaissancePoints = 0;
 
 
@@ -53,8 +57,6 @@ function displayRenaissancePoints() {
     const renaissanceScoreTable = document.getElementById('renaissance_score'); 
     renaissanceScoreTable.innerText = renaissancePoints; 
 }
-
-/*yhteispisteet*/
 
 function displayTotalPoints() {
     const totalPoints = vikingPoints + romePoints + industrialPoints + middleagePoints + egyptPoints || 0;

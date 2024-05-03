@@ -104,6 +104,7 @@ const quizData = [
     if (selectedButton.innerText === answer) {
       score++;
       alert("oikein!");
+
     } else {
 
       alert("Väärin. Oikea vastaus oli: " + answer)
