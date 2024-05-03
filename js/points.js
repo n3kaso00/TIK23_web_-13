@@ -39,10 +39,14 @@ function displayMiddleagePoints() {
     middleageScoreTable.innerText = middleagePoints;
 }
 
+/*yhteispisteet*/
+
 function displayTotalPoints() {
     const totalPoints = vikingPoints + romePoints + industrialPoints + middleagePoints || 0;
     const totalScoreTable = document.getElementById('total_score');
     totalScoreTable.innerText = totalPoints;
 }
+
+/*yhteispisteet päättyy*/
 
 /*pistehaku päättyy*/
