@@ -3,7 +3,6 @@ let vikingPoints = 0;
 let romePoints = 0;
 let industrialPoints = 0;
 let middleagePoints = 0;
-let egyptPoints = 0;
 
 
 displayVikingPoints()
@@ -12,6 +11,7 @@ displayIndustrialPoints()
 displayMiddleagePoints()
 displayEgyptPoints()
 displayTotalPoints()
+displayRenaissancePoints()
 
 
 function displayVikingPoints() {
@@ -55,5 +55,12 @@ function displayTotalPoints() {
 }
 
 /*yhteispisteet päättyy*/
+function displayRenaissancePoints() {
+    renaissancePoints = parseInt(localStorage.getItem('renaissance_points')) || 0; 
+    const renaissanceScoreTable = document.getElementById('renaissance_score'); 
+    renaissanceScoreTable.innerText = renaissancePoints; 
+}
+/*pistehaku päättyy*/
+
 
 /*pistehaku päättyy*/

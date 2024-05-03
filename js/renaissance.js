@@ -65,7 +65,7 @@ let score = 0;
 function startQuiz(){
     currentQuestionIndex = 0;
     score = 0;
-    nextButton.innerHTML = "Next";
+    nextButton.innerHTML = "Seuraava";
     showQuestion();
 }
 
@@ -116,12 +116,16 @@ function selectAnswer(e){
 }
 
 
+
 function showScore(){
     resetState();
+    const maxScoreKey2 = 'renaissance_points';
     questionElement.innerHTML = `Sait ${score} / ${questions.length} pistettä!`;
-    nextButton.innerHTML = "Pelaa uudelleen";
     nextButton.style.display = "block;"
+    localStorage.setItem(maxScoreKey2, renaissance_points)
 }
+
+
 
 function handleNextButton(){
     currentQuestionIndex++;
