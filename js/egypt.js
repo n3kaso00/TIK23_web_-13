@@ -105,8 +105,6 @@ const quizData = [
       score++;
       alert("oikein!");
 
-      egyptPoints++;
-      
     } else {
 
       alert("Väärin. Oikea vastaus oli: " + answer)
