@@ -3,6 +3,7 @@ let vikingPoints = 0;
 let romePoints = 0;
 let industrialPoints = 0;
 let middleagePoints = 0;
+let egyptPoints = 0;
 
 
 displayVikingPoints()
