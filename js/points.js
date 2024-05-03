@@ -3,6 +3,7 @@ let vikingPoints = 0;
 let romePoints = 0;
 let industrialPoints = 0;
 let middleagePoints = 0;
+let totalPoints = 0;
 
 
 displayVikingPoints()
@@ -10,8 +11,8 @@ displayRomeMaxPoints()
 displayIndustrialPoints()
 displayMiddleagePoints()
 displayEgyptPoints()
-displayTotalPoints()
 displayRenaissancePoints()
+displayTotalPoints()
 
 
 function displayVikingPoints() {
