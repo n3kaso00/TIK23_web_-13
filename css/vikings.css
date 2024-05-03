@@ -1,4 +1,8 @@
-
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 #header {
     text-align: center;
@@ -13,6 +17,9 @@ h1 {
     background-color: #3a2618;
     margin-top: 0px;
     font-family:Arial, Helvetica, sans-serif;
+}
+.navbar-toggler {
+    background-color: #f0ead2; 
 }
 
 .navbar a {
@@ -29,13 +36,14 @@ a {
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
+
 #maincontent {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr); 
     background-color: #f0ead2;
     margin: 5px;
-    height: 100%;
+    height: calc(100vh - 114px);
     
 }
 
@@ -88,6 +96,7 @@ a {
     padding: 10px;
     grid-row: 4/5;
     grid-column: 1/5;
+    margin-top: auto;
 }
 
 .footer-content h4{
@@ -108,3 +117,5 @@ a {
 .footer-content p{
     color: #f0ead2;
 }
+
+

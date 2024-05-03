@@ -1,3 +1,4 @@
+/* questions for trivia*/
 
 const questions = [
 
@@ -87,14 +88,31 @@ const questions = [
 
   ];
   
+ 
+/*define variables which we are using in quiz*/
+
 let currentQuestion = 0;
 let points = 0;
 
-/*Displays pre-defined media to elements on loading the page, and defines index
- number to each radiobutton*/
+/*first, we reset variables and remove try-again button if user has already started new game*/
 
-  function showQuestion() {
+function initializeQuiz() {
+    currentQuestion = 0;
+    points = 0;
 
+    
+    document.getElementById('feedbackbox').innerHTML = '';
+    const tryAgainButton = document.getElementById('try-again');
+    if (tryAgainButton) {
+        tryAgainButton.remove();
+    }
+
+    showQuestion();
+}
+
+/* Displays content on screen, including trivia, images, and feedback after a right or wrong answer*/
+
+function showQuestion() {
     const triviaText = document.getElementById("triviabox");
     triviaText.textContent = questions[currentQuestion].trivia;
 
@@ -107,47 +125,77 @@ let points = 0;
     const choices = document.querySelectorAll(".choice");
     const choiceLabels = document.querySelectorAll(".choice-label");
 
+    document.getElementById('answer').disabled = false;
+
     choices.forEach((choice, index) => {
-      choiceLabels[index].textContent = questions[currentQuestion].choices[index];
+        choiceLabels[index].textContent = questions[currentQuestion].choices[index];
     });
-
 }
-showQuestion();
 
-/*Adds submit functionality to function answer*/
+/*form submit handler*/
 
 document.getElementById('answerform').addEventListener('submit', answer);
 
-/* Defines function answer, prevents default page refresh from button, makes data acquirable from form,
-checks if answer is correct, gives points for correct answer and sets pre-defined feedback to be displayed
-if the answer is correct/wrong, also displays next question with 10 sec delay*/
-
-function answer(e){
+/* checks if radiobutton value is the same as in answer-array, adds points and displays feedback*/
+function answer(e) {
     e.preventDefault();
 
-
     let formdata = new FormData(e.currentTarget);
+    document.getElementById('answer').disabled = true;
 
-    if( formdata.get('selection') ==  questions[currentQuestion].answer ){
+    if (formdata.get('selection') == questions[currentQuestion].answer) {
         points++;
         const correctAnswer = document.getElementById("feedbackbox");
         correctAnswer.textContent = questions[currentQuestion].feedback;
-        console.log("Points: ", points);
-}
-
-    else {
-      const wrongAnswer = document.getElementById("feedbackbox");
-      wrongAnswer.textContent = "Vastauksesi oli väärin";
+        setTimeout(nextQuestion, 8000);
+    } else {
+        const wrongAnswer = document.getElementById("feedbackbox");
+        wrongAnswer.textContent = "Vastauksesi oli väärin! Et saanut kysymyksestä pisteitä.";
+        setTimeout(nextQuestion, 3000);
     }
-setTimeout(nextQuestion, 10000);
+    
+}
+
+/* shows next question in array or displays final scores*/
+
+function nextQuestion() {
+    if (currentQuestion < questions.length - 1) {
+        currentQuestion++;
+        showQuestion();
+    } else {
+        showFinalScore();
+    }
 }
 
 
-/*nextQuestion checks if there are any questions left in the pool and displays next Q*/
+const maxScoreKey = 'vikingQuizMaxPoints';
 
-function nextQuestion ()  {
-    if (currentQuestion <= questions.length)
-      {currentQuestion++}
-      showQuestion();   
+/* defines what is showing in the final score screen and stores max score to cache, also displays tryagain-button*/
+function showFinalScore() {
+  const feedbackbox = document.getElementById('feedbackbox');
+  feedbackbox.textContent = `Sait ${points} pistettä kymmenestä. Haluatko yrittää uudelleen?`;
+  document.getElementById('answer').disabled = true;
+
+
+  const maxPoints = parseInt(localStorage.getItem(maxScoreKey)) || 0;
+
+  
+  if (points > maxPoints) {
+      localStorage.setItem(maxScoreKey, points);
+  }
+
+  
+  const existingButton = document.getElementById('try-again');
+  if (existingButton) {
+      existingButton.remove();
+  }
+
+  
+  const tryAgainButton = document.createElement('button');
+  tryAgainButton.id = 'try-again';
+  tryAgainButton.innerText = "Yritä uudelleen";
+  tryAgainButton.onclick = initializeQuiz;
+  document.getElementById('answerbox').appendChild(tryAgainButton);
 }
-   
+
+initializeQuiz();

@@ -54,6 +54,11 @@
             animation-duration: 1s;
             animation-fill-mode: forwards;
         }
+
+        .navbar-toggler {
+            background-color: #f0ead2; 
+        }
+        
         /*navbar päättyy*/        
 
        /* footer */
@@ -93,6 +98,19 @@
         color: #f0ead2;
     }
     /*footer päättyy*/
+
+    @media only screen and (max-width: 800px) {
+        header {
+            padding: 10px;
+        }
+    
+        nav ul li {
+            display: block;
+            margin-bottom: 10px;
+        }
+    
+    }
+
     * {
         margin: 0;
         padding: 0;
@@ -137,7 +155,7 @@
         background: var(--img);
         background-size: cover;
     }
-/* muokkaa reset button sopivaksi*/
+
     .reset {
         padding: 15px 25px;
         border: none;
@@ -175,4 +193,9 @@
         cursor: pointer;
     }
 
+    #rome_points {
+        text-align: center;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+
+    }
     

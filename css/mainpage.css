@@ -1,11 +1,10 @@
+/* header */
 
-        /* header */
-
- h1 {
+h1 {
     margin: 0px;
- }
+}
 
- #header {
+#header {
     text-align: center;
     background-color: #3a2618;
     margin-bottom: 0px;
@@ -14,15 +13,15 @@
 a {
     text-decoration: none;
     color: #f0ead2;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-        /* navbar */
+/* navbar */
 
 .navbar {
     background-color: #3a2618;
     margin-top: 0px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar a {
@@ -41,7 +40,7 @@ a {
 
 #timeline img {
     width: 100%;
-    
+    height: auto;
 }
 
 li:hover {
@@ -51,13 +50,13 @@ li:hover {
 }
 
 
-        /* footer */
+/* footer */
 
-section{
+section {
     padding: 20px;
 }
 
-.footer{
+.footer {
     background-color: #3a2618;
     text-align: center;
     padding: 10px;
@@ -68,26 +67,26 @@ section{
     bottom: 0;
 }
 
-.footer-content h4{
+.footer-content h4 {
     color: #f0ead2;
     font-size: 20px;
     margin-bottom: 1rem;
 }
 
-.footer-content li{
+.footer-content li {
     margin-bottom: 15px;
     display: block;
 }
 
-.footer-content li a{
+.footer-content li a {
     color: #f0ead2;
 }
 
-.footer-content p{
+.footer-content p {
     color: #f0ead2;
 }
 
-        /* maincontent */
+/* maincontent */
 
 #maincontent {
     display: flex;
@@ -95,16 +94,16 @@ section{
     justify-content: center;
     align-items: center;
     background-color: #f0ead2;
-    font-weight:900;
+    font-weight: 900;
     font-family: Georgia, 'Times New Roman', Times, serif
 }
 
-        /* kuvat */
+/* kuvat */
 
 
-#maincontent img {   
+#maincontent img {
     margin: 5px;
-    border-radius: 5px;   
+    border-radius: 5px;
 }
 
 figure {
@@ -130,12 +129,12 @@ img:hover {
 }
 
 
-        /* responsiivisuus */
+/* responsiivisuus */
 
 /* responsiivisuus ei ole vielä lähelläkään valmis :DD */
 
 @media only screen and (max-width: 600px) {
-    img {
+    img:not(#timeline) {
         max-width: 350px;
     }
 }

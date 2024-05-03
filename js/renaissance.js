@@ -49,8 +49,8 @@ const questions = [
         answers: [
             { text: "Suositun tanssijaryhmän välityksellä, joka kiersi maailmaa", correct: false},
             { text: "Kaupan ja opiskelijoiden välityksellä", correct: true},
-            { text: "Maantieteellisten löytöretkien kautta, kun tutkimusmatkailijat veivät eurooppalaisen kulttuurin uusiin maailmoihin", correct: false},
-            { text: "Salattujen maanalaisien tunneliverkostojen avulla, joita pitkin kulttuuriset salaseurat levittivät renessanssin sanomaa", correct: false},
+            { text: "Tutkimusmatkailijoiden mukana", correct: false},
+            { text: "Salattujen maanalaisien tunneliverkostojen avulla, joita pitkin kulttuuriset salaseurat levittivät.", correct: false},
         ]
     }
 ];
@@ -118,8 +118,8 @@ function selectAnswer(e){
 
 function showScore(){
     resetState();
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-    nextButton.innerHTML = "Play Again";
+    questionElement.innerHTML = `Sait ${score} / ${questions.length} pistettä!`;
+    nextButton.innerHTML = "Pelaa uudelleen";
     nextButton.style.display = "block;"
 }
 

@@ -1,16 +1,40 @@
-fetch("some.json", {cache: "only-if-cached"})
-  .then(data => console.log(data))
-  .catch(err => console.log(err));
 
-document.getElementById("rome_score").value = rome_score;
+let vikingPoints = 0;
+let romePoints = 0;
+let industrialPoints = 0;
+let middleagePoints = 0;
 
-document.getElementById("egypt_score").value = egypt_score;
 
-document.getElementById("points").value = points;
+displayVikingPoints()
+displayRomeMaxPoints()
+displayIndustrialPoints()
+displayMiddleagePoints()
+displayTotalPoints()
 
-document.getElementById("middleage_score").value = middleage_score;
 
-document.getElementById("renaissance_score").value = renaissance_score;
+function displayVikingPoints() {
+    vikingPoints = parseInt(localStorage.getItem('vikingQuizMaxPoints')) || 0;
+    const vikingScoreTable = document.getElementById('viking_score');
+    vikingScoreTable.innerText = vikingPoints;
+}
 
-document.getElementById("industrial_score").value = industrial_score;
+function displayRomeMaxPoints() {
+    romePoints = parseInt(localStorage.getItem('rome_points')) || 0 ;
+    const romeScoreTable = document.getElementById('rome_score');
+    romeScoreTable.innerText = romePoints;
+}
 
+function displayIndustrialPoints() {
+    industrialPoints = parseInt(localStorage.getItem('industrial_points')) || 0;
+    const industrialScoreTable = document.getElementById('industrial_score');
+    industrialScoreTable.innerText = industrialPoints;
+}
+
+
+function displayMiddleagePoints() {
+    middleagePoints = parseInt(localStorage.getItem('middleage_points')) || 0;
+    const middleageScoreTable = document.getElementById('middleage_score');
+    middleageScoreTable.innerText = middleagePoints;
+}
+
+/*pistehaku päättyy*/
