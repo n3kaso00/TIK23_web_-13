@@ -176,6 +176,8 @@ button:hover {
     margin-top: 40px;
 }
 
+/* responsiivisuus */
+
 @media only screen and (max-width: 600px) {
     img:not(#timeline) {
         max-width: 350px;

@@ -267,6 +267,7 @@
 
     /* Pisteiden laskeminen */
 
+    const middleage_points = numCorrect;
     resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
 
     const maxScoreKey2 = 'middleage_points';
