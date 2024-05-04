@@ -5,7 +5,7 @@ const questions = [
     {
         
       trivia: "Viikingit muistetaan keskuudessamme pohjoismaisina hurjina sotureina, ja useimmat aiheesta kertovat pelit, elokuvat ja tarinat keskittyvätkin suurimmaksi osaksi tähän heidän hurjaan puoleensa. Viikingit olivat kuitenkin ennen kaikkea menestyneitä kauppiaita ja liikkeenharjoittajia. He saivat elantonsa pitämällä maatiloja, kalastamalla, metsästämällä, kauppaamalla tekemiänsä tuotteita sekä valloittamalla uusia alueita. KYSYMYS: Mille aikavälille Viikinkien aikakausi sijoittui? "  ,
-      choices: ["650-859", "793-1066", "823-1145"], 
+      choices: ["v.650-859", "v.793-1066", "v.823-1145"], 
       image: "",
       answer: 1,
       feedback: "Vastauksesi oli oikein! Viikinkien aikakauden katsotaan alkaneen Lindisfarnen luostariin kohdistuneesta hyökkäyksestä vuonna 793. Viikinkiajan katsotaan loppuneen vuonna 1066, kun Norjan Kuningas Harald III Sigurdsson kukistettiin Stamfordin sillan taistelussa."
@@ -22,7 +22,7 @@ const questions = [
       }  ,
 
       {
-        trivia: "Viikinkien pitämiin eläimiin kuuluivat esimerkiksi vuohet, lampaat, siat, lampaat ja ankat. Niitä vaalittiin suuresti, sillä ne tuottivat Viikingeille ruokaa ja erilaisia, hyötytarvikkeita. Heillä oli myös lemmikkieläimiä (koiria ja kissoja) kuten meilläkin. Viikinkien jumaltarustoon kuitenkin kuului eräs tärkeä susieläin. KYSYMYS: Mikä on tämän kuuluisan suden nimi?", 
+        trivia: "Viikinkien pitämiin eläimiin kuuluivat esimerkiksi vuohet, lampaat, siat, lampaat ja ankat. Niitä vaalittiin suuresti, sillä ne tuottivat Viikingeille ruokaa ja erilaisia hyötytarvikkeita. Heillä oli myös lemmikkieläimiä (koiria ja kissoja) kuten meilläkin. Viikinkien jumaltarustoon kuitenkin kuului eräs tärkeä susieläin. KYSYMYS: Mikä on tämän kuuluisan suden nimi?", 
         choices: ["Gullinbursti","Jörmundgandr","Fenrir"],
         image: "",
         answer: 2,
@@ -38,11 +38,11 @@ const questions = [
       } ,
 
       {
-        trivia: "Viikinkien suurimmat Jumalat olivat nimeltään Odin, Thor ja Freija. Odin muistetaan erityisesti sodan jumalana. Vanha uskomus kuuluu, että Odin ratsasti kahdeksanjalkaisella ratsulla ja Odinilla oli vain yksi silmä, koska hän vaihtoi toisen silmänsä yhteen kulaukseen juomaa viisauden lähteestä. Thor muistetaan oikeuden, voiman ja taistelukenttien jumalana. Thor puolusti ihmisiä jättiläisiltä. Thorilla oli myös kuuluisa vasara, ja hänen mukaansa on myös nimetty viikonpäivä torstai. Freija muistetaan rauhan, hedelmällisyyden, sateen ja auringonpaisteen jumalana. mikä oli thorin vasaran nimi?",
+        trivia: "Viikinkien suurimmat Jumalat olivat nimeltään Odin, Thor ja Freija. Odin muistetaan erityisesti sodan jumalana. Vanha uskomus kuuluu, että Odin ratsasti kahdeksanjalkaisella ratsulla ja Odinilla oli vain yksi silmä, koska hän vaihtoi toisen silmänsä yhteen kulaukseen juomaa viisauden lähteestä. Thor muistetaan oikeuden, voiman ja taistelukenttien jumalana. Thor puolusti ihmisiä jättiläisiltä. Thorilla oli myös kuuluisa vasara, ja hänen mukaansa on myös nimetty viikonpäivä torstai. Freija muistetaan rauhan, hedelmällisyyden, sateen ja auringonpaisteen jumalana. KYSYMYS: Mikä oli Thorin vasaran nimi?",
         choices: ["Skofnung","Mjölnir","Gungnir"],
         image: "",
         answer: 1,
-        feedback: "Vastauksesi oli oikein! Mjölnir tunnetaan Thorin vasarana. Skofnung oli legendaarien Tanskan kuninkaan Hrolf Krakin miekka. Gungnir tunnettiin Odinin keihäänä."
+        feedback: "Vastauksesi oli oikein! Mjölnir tunnetaan Thorin vasarana. Skofnung oli legendaarisen Tanskan kuninkaan Hrolf Krakin miekka. Gungnir tunnettiin Odinin keihäänä."
       } ,
 
       {
@@ -58,7 +58,7 @@ const questions = [
         choices: ["Suomi, Ruotsi, Norja", " Ruotsi, Tanska, Norja", "Tanska, Ruotsi, Suomi"],
         image: "",
         answer: 1,
-        feedback: "Vastauksesi oli oikein! Skandien vuoristo kulkee keskeltä Ruotsia, Norjaa ja Suomea, mutta virallisesti Skandinavian käsittää Ruotsin, Norjan ja Tanskan alueen.",
+        feedback: "Vastauksesi oli oikein! Skandien vuoristo kulkee keskeltä Ruotsia, Norjaa ja Suomea, mutta virallisesti Skandinavia käsittää Ruotsin, Norjan ja Tanskan alueen.",
       },
 
       {
@@ -168,7 +168,7 @@ function nextQuestion() {
 }
 
 
-const maxScoreKey = 'vikingQuizMaxPoints';
+const maxScoreKey = 'viking_points';
 
 /* defines what is showing in the final score screen and stores max score to cache, also displays tryagain-button*/
 function showFinalScore() {

@@ -18,7 +18,7 @@ displayTotalPoints()
 
 
 function displayVikingPoints() {
-    vikingPoints = parseInt(localStorage.getItem('vikingQuizMaxPoints')) || 0;
+    vikingPoints = parseInt(localStorage.getItem('viking_points')) || 0;
     const vikingScoreTable = document.getElementById('viking_score');
     vikingScoreTable.innerText = vikingPoints;
 }
