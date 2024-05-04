@@ -4,10 +4,7 @@ let romePoints = 0;
 let industrialPoints = 0;
 let middleagePoints = 0;
 let totalPoints = 0;
-<<<<<<< HEAD
 let egyptPoints = 0;
-=======
->>>>>>> ad7f9664d7a40c54bba4697a450f473c80e8de1e
 let renaissancePoints = 0;
 let egyptPoints = 0;
 
