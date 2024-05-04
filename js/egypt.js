@@ -128,6 +128,7 @@ const quizData = [
     points.textContent =`${score}/${quizData.length}`;
     quizContent.classList.add('hidden');
     result.classList.remove('hidden');
+    const egypt_points = score;
     localStorage.setItem(maxScoreKey2, egypt_points);
   }
 
