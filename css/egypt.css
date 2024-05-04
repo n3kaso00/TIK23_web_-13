@@ -21,6 +21,10 @@ body {
     
 }
 
+.navbar-toggler {
+    background-color: #f0ead2;
+}
+
 .navbar a:hover {
     color: #f0ead2;
 }
