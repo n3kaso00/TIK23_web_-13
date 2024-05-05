@@ -56,7 +56,7 @@ function displayRenaissancePoints() {
 }
 
 function displayTotalPoints() {
-    const totalPoints = vikingPoints + romePoints + industrialPoints + middleagePoints + egyptPoints || 0;
+    const totalPoints = vikingPoints + romePoints + industrialPoints + middleagePoints + egyptPoints + renaissancePoints || 0;
     const totalScoreTable = document.getElementById('total_score');
     totalScoreTable.innerText = totalPoints;
 }
