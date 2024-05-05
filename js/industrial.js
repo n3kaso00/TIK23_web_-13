@@ -50,10 +50,6 @@ for ( var i = 0; i< words.length; i++){
                     document.querySelectorAll('.boxOpen')[1].classList.remove('boxOpen')
                     document.querySelectorAll('.boxOpen')[0].classList.remove('boxOpen')
 
-                    // If all words are matched, show a winning alert
-                    if(document.querySelectorAll('.boxMatch').length == words.length){
-                        alert('Voitit pelin! Pisteesi: ' + points)
-                    }
                     
                 } else {
 
