@@ -122,7 +122,7 @@ function showScore(){
     const maxScoreKey2 = 'renaissance_points';
     questionElement.innerHTML = `Sait ${score} / ${questions.length} pistettä!`;
     nextButton.style.display = "block;"
-    localStorage.setItem(maxScoreKey2, renaissance_points)
+    localStorage.setItem(maxScoreKey2, score);
 }
 
 
