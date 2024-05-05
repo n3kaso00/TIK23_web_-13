@@ -18,3 +18,4 @@ Site is made by:
 * Sonja Karppanen   //n3kaso00  (Industrial revolution)
 
 Hacknplan link: https://app.hacknplan.com/p/202055/kanban?categoryId=0&boardId=556173
+Julkaistu sivu: https://www.students.oamk.fi/~n3juma00/web%20projekti%2013/web_project/
