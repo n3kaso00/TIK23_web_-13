@@ -52,7 +52,7 @@ for ( var i = 0; i< words.length; i++){
 
                     // If all words are matched, show a winning alert
                     if(document.querySelectorAll('.boxMatch').length == words.length){
-                        alert('Voitit pelin! Pisteesi: ' + points + ' Yritykset: ' + tries)
+                        alert('Voitit pelin! Pisteesi: ' + points)
                     }
                     
                 } else {
